@@ -1,5 +1,27 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="container">
+	<div class="menu">
+		{{#link-to 'index'}}
+			<h1 class="left">
+				<em>Course NEBULA</em>
+			</h1>
+		{{/link-to}}
+		<div class="left links">
+			{{#link-to 'courses'}}
+				Courses
+			{{/link-to}}
+			{{#link-to 'about'}}
+				About
+			{{/link-to}}
+		</div>
+		<div class="right links">
+		  	{{#link-to 'login'}}Login{{/link-to}}
+		</div>
 
-{{outlet}}
+	</div>
+	<div class="body">
+		{{outlet}}
+	</div>
+
+
+
+</div>
