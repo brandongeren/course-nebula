@@ -1,9 +1,0 @@
-{
-  "hooks": {
-    "grunt": false,
-    "views": false
-  },
-  "paths": {
-    "public": "assets"
-  }
-}
