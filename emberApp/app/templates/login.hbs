@@ -10,20 +10,6 @@
   </div>
 </div> -->
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="description" content="Ember Starting Point v1.0.0-rc.3" />
-<meta charset=utf-8 />
-<title>Ember Starting Point</title>
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://builds.emberjs.com/handlebars-1.0.0-rc.3.js"></script>
-  <script src="http://builds.emberjs.com/ember-1.0.0-rc.3.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-</head>
-<body>
-  <script type="text/x-handlebars" data-template-name="index">
 <form class="form-horizontal" {{action "login" on="submit"}}>
   {{#if loginFailed}}
     <div class="alert">Invalid username or password.</div>
@@ -55,7 +41,3 @@
 
   <button type="submit" class="btn" {{bindAttr disabled="isProcessing"}}>Log in!</button>
 </form>
-</script>
-  
-</body>
-</html>

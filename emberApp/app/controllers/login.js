@@ -1,3 +1,5 @@
+/*
+
 App = Ember.Application.create();
 
 App.IndexController = Ember.Controller.extend({
@@ -42,3 +44,5 @@ App.IndexController = Ember.Controller.extend({
   }
 
 });
+
+*/
