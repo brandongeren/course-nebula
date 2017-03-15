@@ -1,0 +1,1 @@
+/Users/brandongeren/Documents/course-nebula/app/components/course-listing.js
