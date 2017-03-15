@@ -1,1 +1,0 @@
-/Users/brandongeren/Documents/course-nebula/emberApp/tmp/funnel-input_base_path-xrqwX302.tmp/build/build/faker.js

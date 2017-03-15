@@ -1,1 +1,0 @@
-/Users/brandongeren/Documents/course-nebula/tmp/broccoli_merge_trees-input_base_path-D7APu6R6.tmp/0/course-nebula/tests/helpers/module-for-acceptance.js

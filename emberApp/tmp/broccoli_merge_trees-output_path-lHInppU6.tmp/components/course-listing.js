@@ -1,1 +1,0 @@
-/Users/brandongeren/Documents/course-nebula/emberApp/app/components/course-listing.js
