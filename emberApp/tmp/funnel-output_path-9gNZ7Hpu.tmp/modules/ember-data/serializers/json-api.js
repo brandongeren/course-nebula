@@ -1,1 +1,0 @@
-/Users/brandongeren/Documents/course-nebula/tmp/funnel-input_base_path-kfWOaWkc.tmp/serializers/json-api.js

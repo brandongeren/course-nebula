@@ -1,1 +1,0 @@
-/Users/brandongeren/Documents/course-nebula/emberApp/tmp/funnel-input_base_path-qUW7TNRL.tmp/components/welcome-page.js

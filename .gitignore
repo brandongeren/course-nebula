@@ -1,17 +1,17 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
-/tmp
+/emberApp/dist
+/emberApp/tmp
 
 # dependencies
-/node_modules
-/bower_components
+/emberApp/node_modules
+/emberApp/bower_components
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage/*
-/libpeerconnection.log
-npm-debug.log*
-testem.log
+/emberApp/.sass-cache
+/emberApp/connect.lock
+/emberApp/coverage/*
+/emberApp/libpeerconnection.log
+/emberApp/npm-debug.log*
+/emberApp/testem.log

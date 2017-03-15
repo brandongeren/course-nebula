@@ -1,9 +1,0 @@
-define('course-nebula/tests/components/course-listing.jshint.lint-test', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | components/course-listing.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'components/course-listing.js should pass jshint.');
-  });
-});
