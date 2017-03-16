@@ -1,9 +1,10 @@
+/*
+
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-/*This model will extract the data needed to create a new credential and
- *pass it to our controller.
- */
+// This model will extract the data needed to create a new credential and pass it to our controller.
+
 model() {
 	var params,
 		credential;
@@ -36,7 +37,6 @@ afterModel(model) {
 		    this.store.createRecord('user', {name, email}).save().then((user)=>{
 			model.set('user', user);
 			model.save();
-<<<<<<< HEAD
 		           });
  		       });
 	           }
@@ -44,11 +44,4 @@ afterModel(model) {
    }
 });
 
-=======
-		     });
- 		  });
-	}
-});
-}
-});
->>>>>>> 8039aa75643ddea3c947af49d12d311cb8560c81
+*/
