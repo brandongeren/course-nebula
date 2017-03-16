@@ -10,23 +10,23 @@ userAnsweredQuestions int
 create table DashboardItem
 (
 DashboardItemID int,
-ClassID int,
+CourseID int,
 UserID int,
 NotificationFlag int
 );
 
 
-create table Class
+create table Course
 (
-ClassID int,
-ClassNumber int,
-ClassName varchar(255)
+CourseID int,
+CourseNumber varchar(255),
+CourseName varchar(255)
 );
 
 create table Handout
 (
 HandoutID int,
-ClassID int,
+CourseID int,
 HandoutKey varchar(255)
 );
 
@@ -34,7 +34,7 @@ HandoutKey varchar(255)
 create table Question
 (
 QuestionID int,
-ClassID int,
+CourseID int,
 QuestionText varchar(255),
 DateOfQuestion datetime,
 QuestionRating double,
@@ -52,7 +52,7 @@ AnswerRating double
 create table Feedback
 (
 FeedbackID int,
-ClassID int,
+CourseID int,
 FeedbackText varchar(255),
 FeedbackRating double,
 DateOfFeedback datetime
@@ -62,5 +62,22 @@ create table Instructor
 (
 InstructorID int,
 UserID int,
-ClassID int
+CourseID int
 );
+
+ALTER TABLE DashboardItem
+ADD FOREIGN KEY (CourseID) REFERENCES Course(CourseID);
+ALTER TABLE DashboardItem
+ADD FOREIGN KEY (UserID) REFERENCES User(UserID);
+ALTER TABLE Feedback
+ADD FOREIGN KEY (CourseID) REFERENCES Course(CourseID);
+ALTER TABLE Handout
+ADD FOREIGN KEY (CourseID) REFERENCES Course(CourseID);
+ALTER TABLE DashboardItem
+ADD FOREIGN KEY (CourseID) REFERENCES Course(CourseID);
+ALTER TABLE Instructor
+ADD FOREIGN KEY (CourseID) REFERENCES Course(CourseID);
+ALTER TABLE Instructor
+ADD FOREIGN KEY (UserID) REFERENCES User(UserID);
+ALTER TABLE Question
+ADD FOREIGN KEY (CourseID) REFERENCES Course(CourseID);
