@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "sails-mysql": "^0.11.5",
     "sane-cli": "0.0.24"
   }
 }

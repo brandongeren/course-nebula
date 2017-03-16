@@ -1,48 +1,14 @@
-/*
+import Ember from 'ember';
 
-App = Ember.Application.create();
+export default Ember.Controller.extend({
+  session: Ember.inject.service('session'),
 
-App.IndexController = Ember.Controller.extend({
-
-  loginFailed: false,
-  isProcessing: false,
-  isSlowConnection: false,
-  timeout: null,
-
-  login: function() {
-    this.setProperties({
-      loginFailed: false,
-      isProcessing: true
-    });
-
-    this.set("timeout", setTimeout(this.slowConnection.bind(this), 1));
-
-    var request = $.post("/login", this.getProperties("username", "password"));
-    request.then(this.success.bind(this), this.failure.bind(this));
-  },
-
-  success: function() {
-    this.reset();
-    // sign in logic
-  },
-
-  failure: function() {
-    this.reset();
-    this.set("loginFailed", true);
-  },
-
-  slowConnection: function() {
-    this.set("isSlowConnection", true);
-  },
-
-  reset: function() {
-    clearTimeout(this.get("timeout"));
-    this.setProperties({
-      isProcessing: false,
-      isSlowConnection: false
-    });
+  actions: {
+    authenticate() {
+      let { identification, password } = this.getProperties('identification', 'password');
+      this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
+        this.set('errorMessage', reason.error || reason);
+      });
+    }
   }
-
 });
-
-*/
