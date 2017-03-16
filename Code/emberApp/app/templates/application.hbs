@@ -14,7 +14,11 @@
 			{{/link-to}}
 		</div>
 		<div class="right links">
-		  	<!-- {{#link-to 'login'}}Login{{/link-to}} -->
+			{{#if session.isAuthenticated}}
+				<a {{action 'invalidateSession'}}>Logout</a>
+			{{else}}
+				{{#link-to 'login'}}Login{{/link-to}}
+			{{/if}}
 		</div>
 
 	</div>
