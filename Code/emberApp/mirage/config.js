@@ -2,9 +2,7 @@ export default function() {
 
   this.namespace = '/api';
 
-  this.get('/courses', function() {
-    return {
-      data: [{
+  let courses = [{
         type: 'courses',
         id: 1,
         attributes: {
@@ -25,7 +23,17 @@ export default function() {
           number: '101',
           name: 'Fundamentals of Computer Science'
         }
-      }]
-    };
+      }];
+
+  this.get('/courses', function() {
+    return { data: courses };
   });
+
+
+
+    // Find and return the provided course from our course list above
+  this.get('/courses/:id', function (db, request) {
+    return { data: courses.find((rental) => request.params.id === course.id) };
+  });
+
 }
