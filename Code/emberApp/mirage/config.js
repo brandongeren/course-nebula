@@ -4,21 +4,21 @@ export default function() {
 
   let courses = [{
         type: 'courses',
-        id: 1,
+        id: '1',
         attributes: {
           number: '10',
           name: 'Introduction to CSE'
         }
       }, {
         type: 'courses',
-        id: 2,
+        id: '2',
         attributes: {
           number: '100',
           name: 'Introduction to Informatics'
         }
       }, {
         type: 'courses',
-        id: 3,
+        id: '3',
         attributes: {
           number: '101',
           name: 'Fundamentals of Computer Science'
@@ -33,7 +33,7 @@ export default function() {
 
     // Find and return the provided course from our course list above
   this.get('/courses/:id', function (db, request) {
-    return { data: courses.find((rental) => request.params.id === course.id) };
+    return { data: courses.find((course) => request.params.id === course.id) };
   });
 
 }

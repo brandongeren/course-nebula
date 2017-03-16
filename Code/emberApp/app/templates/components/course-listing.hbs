@@ -1,6 +1,9 @@
+
 <article class="listing">
 	<h3>CSCE {{course.number}}</h3>
 	<div class="detail name">
 		{{course.name}}
 	</div>
+	<br/>
+	{{#link-to "courses.show" course}}More detail{{/link-to}}
 </article>
