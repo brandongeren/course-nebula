@@ -8,21 +8,21 @@ export default function() {
         type: 'courses',
         id: 1,
         attributes: {
-          number: 'CSCE 10',
+          number: '10',
           name: 'Introduction to CSE'
         }
       }, {
         type: 'courses',
         id: 2,
         attributes: {
-          number: 'CSCE 100',
+          number: '100',
           name: 'Introduction to Informatics'
         }
       }, {
         type: 'courses',
         id: 3,
         attributes: {
-          number: 'CSCE 101',
+          number: '101',
           name: 'Fundamentals of Computer Science'
         }
       }]

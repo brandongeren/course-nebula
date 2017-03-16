@@ -36,7 +36,19 @@ afterModel(model) {
 		    this.store.createRecord('user', {name, email}).save().then((user)=>{
 			model.set('user', user);
 			model.save();
+<<<<<<< HEAD
+		           });
+ 		       });
+	           }
+	 });
+   }
+});
+
+=======
 		     });
  		  });
 	}
-);
+});
+}
+});
+>>>>>>> 8039aa75643ddea3c947af49d12d311cb8560c81
