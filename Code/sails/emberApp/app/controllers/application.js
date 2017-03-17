@@ -7,10 +7,14 @@ export default Ember.Controller.extend({
     invalidateSession() {
       this.get('session').invalidate();
     }
+<<<<<<< HEAD
   }*/
 
   hideLoginButtonRoutes: ['courses', 'show', 'ask'],
  	isLoginButtonVisible: Ember.computed('currentRouteName', function(){
 		return this.get('hideLoginButtonRoutes').indexOf(this.get('currentRouteName')) === -1;
 	})
+=======
+  }
+>>>>>>> 03c0291... registration page
 });
