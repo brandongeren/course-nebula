@@ -14,10 +14,10 @@ module.exports = {
 	var rating = req.param('rating');
 
 	var feedback = {
-	    course = course,
-	    text = text,
-	    date = date,
-	    rating = rating,
+	    course : course,
+	    text : text,
+	    date : date,
+	    rating : rating,
 	}
 
 	Feedback.create(feedback).exec(function(err,result) {

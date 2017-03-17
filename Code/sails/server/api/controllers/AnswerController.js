@@ -13,9 +13,9 @@ module.exports = {
 	var rating = req.param('rating');
 
 	var answer = {
-	    text = text,
-	    date = date,
-	    rating = rating
+	    text : text,
+	    date : date,
+	    rating : rating
 	}
 
 	Answer.create(answer).exec(function(err,result) {

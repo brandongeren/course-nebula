@@ -15,11 +15,11 @@ module.exports = {
 	var answer = req.param('answer');
 
 	var question = {
-	    course = course,
-	    text = text,
-	    date = date,
-	    rating = rating,
-	    answer = answer
+	    course : course,
+	    text : text,
+	    date : date,
+	    rating : rating,
+	    answer : answer
 	}
 
 	Question.create(question).exec(function(err,result) {
