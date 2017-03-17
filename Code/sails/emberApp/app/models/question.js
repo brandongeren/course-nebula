@@ -5,5 +5,4 @@ export default DS.Model({
     questionText: DS.attr('string'),
     dateOfQuestion: DS.attr('date'),
     questionRating: DS.attr('number'),
-    answer: DS.belongsTo('answer')
 });
