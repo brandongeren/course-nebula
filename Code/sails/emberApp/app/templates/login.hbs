@@ -1,12 +1,14 @@
 {{outlet}}
 
-<form {{action 'authenticate' on='submit'}}>
-  <label for="identification">Login</label>
-  {{input id='identification' placeholder='login' value=identification}}
-  <label for="password">Password</label>
-  {{input id='password' placeholder='password' type='password' value=password}}
-  <button type="submit">Login</button>
-  {{#if errorMessage}}
-    <p>{{errorMessage}}</p>
-  {{/if}}
-</form>
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" {{action 'authenticate' on='submit'}}>
+  		{{input id='username' placeholder='username' value=username}}
+  		{{input id='password' placeholder='password' type='password' value=password}}
+  		{{#link-to 'courses'}} <button type="submit">login</button> {{/link-to}}
+  		{{#if errorMessage}}
+  		  <p>{{errorMessage}}</p>
+  		{{/if}}
+    </form>
+  </div>
+</div>
