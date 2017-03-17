@@ -1,5 +1,5 @@
 /**
- * Handout.js
+ * Answer.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -9,9 +9,11 @@ module.exports = {
 
   attributes: {
 
-      course : { model:'course', columnName:'CourseID' },
+      text : { type: 'string', columnName: 'AnswerText' },
 
-      key : { type: 'string', columnName:'HandoutKey' }
+      date : { type: 'datetime', columnName: 'DateOfAnswer' },
+
+      rating : { type: 'float', columnName: 'AnswerRating' }
   }
 };
 
