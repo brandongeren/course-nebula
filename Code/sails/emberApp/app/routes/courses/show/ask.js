@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 		savequestion: function(body) {
 			this.get('store').createRecord('question', {
 				text: body,
-				course: this,
+				course: null,
 				date: new Date(),
 				rating: 0
 			});
