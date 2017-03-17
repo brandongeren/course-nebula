@@ -1,12 +1,12 @@
 <br/>
-<div class="jumbo">  
+<article class="listing">  
         <h1>New Question</h1>
 
-        <form {{action 'save' on="submit"}}>
+        <form {{action 'savequestion' on="submit"}}>
 
         <dl>
         <dt>Question:<br> {{textarea value=description cols="80" rows="6"}}</dt>
         </dl>
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Ask!</button>
         </form>
-</div>
+</article>
