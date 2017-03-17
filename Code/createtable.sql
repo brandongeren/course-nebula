@@ -1,68 +1,76 @@
 create table User
 (
-UserID int,
+UserID int NOT NULL AUTO_INCREMENT,
 Username varchar(255),
 password varchar(255),
 email varchar(255),
-userAnsweredQuestions int
+userAnsweredQuestions int,
+PRIMARY KEY (UserID)
 );
 
 create table DashboardItem
 (
-DashboardItemID int,
+DashboardItemID int NOT NULL AUTO_INCREMENT,
 CourseID int,
 UserID int,
-NotificationFlag int
+NotificationFlag int,
+PRIMARY KEY (DashboardItemID)
 );
 
 
 create table Course
 (
-CourseID int,
+CourseID int NOT NULL AUTO_INCREMENT,
 CourseNumber varchar(255),
-CourseName varchar(255)
+CourseName varchar(255),
+PRIMARY KEY (CourseID)
 );
 
 create table Handout
 (
-HandoutID int,
+HandoutID int NOT NULL AUTO_INCREMENT,
 CourseID int,
-HandoutKey varchar(255)
+HandoutKey varchar(255),
+PRIMARY KEY (Handout)
 );
 
 
 create table Question
 (
-QuestionID int,
+QuestionID int NOT NULL AUTO_INCREMENT,
 CourseID int,
 QuestionText varchar(255),
 DateOfQuestion datetime,
 QuestionRating double,
-AnswerID int
+AnswerID int,
+PRIMARY KEY (QuestionID)
 );
 
 create table Answer
 (
-AnswerID int,
+AnswerID int NOT NULL AUTO_INCREMENT,
 AnswerText varchar(255),
 DateOfAnswer datetime,
-AnswerRating double
+AnswerRating double,
+PRIMARY KEY (AnswerID)
 );
 
 create table Feedback
 (
-FeedbackID int,
+FeedbackID int NOT NULL AUTO_INCREMENT,
 CourseID int,
 FeedbackText varchar(255),
 FeedbackRating double,
-DateOfFeedback datetime
+DateOfFeedback datetime,
+PRIMARY KEY (FeedbackID)
 );
 
 create table Instructor
 (
-InstructorID int,
+InstructorID int NOT NULL AUTO_INCREMENT,
 UserID int,
-CourseID int
+CourseID int,
+PRIMARY KEY (InstructorID)
 );
 
 ALTER TABLE DashboardItem
