@@ -834,6 +834,246 @@ attributes: {
 number: "498",
 name: "Computer Problems"
 }
+      },
+{
+type: 'courses',
+id: '891',
+attributes: {
+number: "891",
+name: "Internship in Computer Practise"
+}
+      },
+{
+type: 'courses',
+id: '897',
+attributes: {
+number: "897",
+name: "Master Project"
+}
+      },
+{
+type: 'courses',
+id: '899',
+attributes: {
+number: "899",
+name: "Master Thesis"
+}
+      },
+{
+type: 'courses',
+id: '910',
+attributes: {
+number: "910",
+name: "Information Organization and Retrieval"
+}
+      },
+{
+type: 'courses',
+id: '913',
+attributes: {
+number: "913",
+name: "Advanced Topics in Database Systems"
+}
+      },
+{
+type: 'courses',
+id: '914',
+attributes: {
+number: "914",
+name: "Constraint Database Systems"
+}
+      },
+{
+type: 'courses',
+id: '921',
+attributes: {
+number: "921",
+name: "Advanced Constraint Processing"
+}
+      },
+{
+type: 'courses',
+id: '923',
+attributes: {
+number: "923",
+name: "Development and Analysis of Efficient Algorithms"
+}
+      },
+{
+type: 'courses',
+id: '924',
+attributes: {
+number: "924",
+name: "Graph Algorithms"
+}
+      },
+{
+type: 'courses',
+id: '925',
+attributes: {
+number: "925",
+name: "Scheduling Theory"
+}
+      },
+{
+type: 'courses',
+id: '930',
+attributes: {
+number: "930",
+name: "Advanced Computer Architecture"
+}
+      },
+{
+type: 'courses',
+id: '932',
+attributes: {
+number: "932",
+name: "Fault-Tolerance: Testing and Testable Design"
+}
+      },
+{
+type: 'courses',
+id: '933',
+attributes: {
+number: "933",
+name: "Fault-Tolerance: System Design and Analysis"
+}
+      },
+{
+type: 'courses',
+id: '936',
+attributes: {
+number: "936",
+name: "Cyber-Physical Systems"
+}
+      },
+{
+type: 'courses',
+id: '942',
+attributes: {
+number: "942",
+name: "Numerical Analysis III"
+}
+      },
+{
+type: 'courses',
+id: '952',
+attributes: {
+number: "952",
+name: "Advanced Computer Networks"
+}
+      },
+{
+type: 'courses',
+id: '953',
+attributes: {
+number: "953",
+name: "Optical Communication Networks"
+}
+      },
+{
+type: 'courses',
+id: '961',
+attributes: {
+number: "961",
+name: "Coding Theory"
+}
+      },
+{
+type: 'courses',
+id: '962',
+attributes: {
+number: "962",
+name: "Advanced Software Engineering "
+}
+      },
+{
+type: 'courses',
+id: '970',
+attributes: {
+number: "970",
+name: "Pattern Recognition"
+}
+      },
+{
+type: 'courses',
+id: '971',
+attributes: {
+number: "971",
+name: "Advanced Bioinformatics"
+}
+      },
+{
+type: 'courses',
+id: '973',
+attributes: {
+number: "973",
+name: "Support Vector Machines"
+}
+      },
+{
+type: 'courses',
+id: '974',
+attributes: {
+number: "974",
+name: "Genetic Algorithms"
+}
+      },
+{
+type: 'courses',
+id: '976',
+attributes: {
+number: "976",
+name: "Advanced Artificial Intelligence"
+}
+      },
+{
+type: 'courses',
+id: '977',
+attributes: {
+number: "977",
+name: "Data Encryption"
+}
+      },
+{
+type: 'courses',
+id: '979',
+attributes: {
+number: "979",
+name: "Advances in Neural Networks and Genetic Algorithms"
+}
+      },
+{
+type: 'courses',
+id: '99',
+attributes: {
+number: "99",
+name: "Graduate Seminar"
+}
+      },
+{
+type: 'courses',
+id: '990',
+attributes: {
+number: "990",
+name: "Seminar"
+}
+      },
+{
+type: 'courses',
+id: '996',
+attributes: {
+number: "996",
+name: "Research Problems Other Than Thesis"
+}
+      },
+{
+type: 'courses',
+id: '999',
+attributes: {
+number: "999",
+name: "Doctoral Dissertation"
+}
       }
 ];
 
