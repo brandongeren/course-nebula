@@ -12,7 +12,14 @@
 	<br/>
 	{{#link-to 'courses.show.ask'}} <button type="submit">Ask a question!</button> {{/link-to}}
 
+
 </article>
 
 
 {{outlet}}
+
+<ul class="results">
+	{{#each FIXTHIS as |question|}}
+		<li>{{question-listing question=question}}</li>
+	{{/each}}
+</ul>
