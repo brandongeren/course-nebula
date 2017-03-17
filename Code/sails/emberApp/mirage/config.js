@@ -845,7 +845,7 @@ name: "Computer Problems"
 
     // Find and return the provided course from our course list above
   this.get('/courses/:id', function (db, request) {
-    return { data: courses.find((course) => request.params.id === course.id) };
-  });
+   		 return { data: courses.find((course) => request.params.id === course.id) };
+    }); 
 
 }
