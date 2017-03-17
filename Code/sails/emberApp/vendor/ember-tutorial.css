@@ -345,7 +345,7 @@ p {
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.form button{
   font-family: "Helvetica", sans-serif;
   outline: 0;
   background: #176117;
@@ -374,3 +374,18 @@ p {
 .form .register-form {
   display: none;
 }
+
+.listing button{
+  font-family: "Helvetica", sans-serif;
+  outline: 0;
+  background: #176117;
+  width: 300px;
+  border: 0;
+  padding: 15px;
+  color: #f3f3f3;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
