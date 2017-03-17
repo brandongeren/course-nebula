@@ -10,32 +10,14 @@
 	<br/>
 	<a href="https://bulletin.unl.edu/courses/CSCE/{{model.number}}">Information about ACE credits</a>
 	<br/>
-<<<<<<< HEAD
 	{{#link-to 'courses.show.ask'}} <button type="submit">Ask a question!</button> {{/link-to}}
-<<<<<<< HEAD
-
-
-=======
-	<br/>
->>>>>>> dbbd60c... upload didn't work
-=======
-<!--	 {{#link-to 'courses.show.ask' course=model}} <button type="submit">Ask a question!</button> {{/link-to}} -->
-  <br/>
->>>>>>> 307aee394e6fa919099158cccd7b8a94ea095f2a
 </article>
 
 
 {{outlet}}
 
 <ul class="results">
-<<<<<<< HEAD
-	{{#each FIXTHIS as |question|}}
-		<li>{{question-listing question=question}}</li>
-	{{/each}}
-</ul>
-=======
 	{{#each qn as |questionEntry|}}
 		<li>{{question-listing question=questionEntry}}</li>
 	{{/each}}
 </ul>
->>>>>>> 307aee394e6fa919099158cccd7b8a94ea095f2a
