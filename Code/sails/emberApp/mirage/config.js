@@ -5,7 +5,7 @@ export default function() {
   let courses = [
 {
 type: 'courses',
-id: '10',
+id: 'CSCE10',
 attributes: {
 number: "10",
 name: "Introduction to CSE"
@@ -13,7 +13,7 @@ name: "Introduction to CSE"
       },
 {
 type: 'courses',
-id: '100',
+id: 'CSCE100',
 attributes: {
 number: "100",
 name: "Introduction to Informatics"
@@ -21,7 +21,7 @@ name: "Introduction to Informatics"
       },
 {
 type: 'courses',
-id: '101',
+id: 'CSCE101',
 attributes: {
 number: "101",
 name: "Fundamentals of Computer Science"
@@ -29,7 +29,7 @@ name: "Fundamentals of Computer Science"
       },
 {
 type: 'courses',
-id: '101L',
+id: 'CSCE101L',
 attributes: {
 number: "101L",
 name: "Fundamentals of Computing Laboratory"
@@ -37,7 +37,7 @@ name: "Fundamentals of Computing Laboratory"
       },
 {
 type: 'courses',
-id: '120',
+id: 'CSCE120',
 attributes: {
 number: "120",
 name: "Learning to Code"
@@ -45,7 +45,7 @@ name: "Learning to Code"
       },
 {
 type: 'courses',
-id: '155A',
+id: 'CSCE155A',
 attributes: {
 number: "155A",
 name: "Computer Science I"
@@ -53,7 +53,7 @@ name: "Computer Science I"
       },
 {
 type: 'courses',
-id: '155E',
+id: 'CSCE155E',
 attributes: {
 number: "155E",
 name: "Computer Science I: Systems Engineering Focus"
@@ -61,7 +61,7 @@ name: "Computer Science I: Systems Engineering Focus"
       },
 {
 type: 'courses',
-id: '155H',
+id: 'CSCE155H',
 attributes: {
 number: "155H",
 name: "Honors: Computer Science I"
@@ -69,7 +69,7 @@ name: "Honors: Computer Science I"
       },
 {
 type: 'courses',
-id: '155N',
+id: 'CSCE155N',
 attributes: {
 number: "155N",
 name: "Computer Science I: Engineering and Science Focus"
@@ -77,7 +77,7 @@ name: "Computer Science I: Engineering and Science Focus"
       },
 {
 type: 'courses',
-id: '155T',
+id: 'CSCE155T',
 attributes: {
 number: "155T",
 name: "Computer Science I: Informatics Focus"
@@ -85,7 +85,7 @@ name: "Computer Science I: Informatics Focus"
       },
 {
 type: 'courses',
-id: '156',
+id: 'CSCE156',
 attributes: {
 number: "156",
 name: "Computer Science II"
@@ -93,7 +93,7 @@ name: "Computer Science II"
       },
 {
 type: 'courses',
-id: '156H',
+id: 'CSCE156H',
 attributes: {
 number: "156H",
 name: "Honors: Computer Science II"
@@ -101,7 +101,7 @@ name: "Honors: Computer Science II"
       },
 {
 type: 'courses',
-id: '183H',
+id: 'CSCE183H',
 attributes: {
 number: "183H",
 name: "Honors: Computer Problem Solving Essentials"
@@ -109,7 +109,7 @@ name: "Honors: Computer Problem Solving Essentials"
       },
 {
 type: 'courses',
-id: '184H',
+id: 'CSCE184H',
 attributes: {
 number: "184H",
 name: "Honors: Software Development Essentials"
@@ -117,7 +117,7 @@ name: "Honors: Software Development Essentials"
       },
 {
 type: 'courses',
-id: '190',
+id: 'CSCE190',
 attributes: {
 number: "190",
 name: "Special Topics in Computer Science"
@@ -125,7 +125,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '196',
+id: 'CSCE196',
 attributes: {
 number: "196",
 name: "Special Topics in Computer Science"
@@ -133,7 +133,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '220',
+id: 'CSCE220',
 attributes: {
 number: "220",
 name: "Software Development for Smart-Mobile Systems"
@@ -141,7 +141,7 @@ name: "Software Development for Smart-Mobile Systems"
       },
 {
 type: 'courses',
-id: '230',
+id: 'CSCE230',
 attributes: {
 number: "230",
 name: "Computer Organization"
@@ -149,7 +149,7 @@ name: "Computer Organization"
       },
 {
 type: 'courses',
-id: '230H',
+id: 'CSCE230H',
 attributes: {
 number: "230H",
 name: "Honors: Computer Organization"
@@ -157,7 +157,7 @@ name: "Honors: Computer Organization"
       },
 {
 type: 'courses',
-id: '235',
+id: 'CSCE235',
 attributes: {
 number: "235",
 name: "Introduction to Discrete Structures"
@@ -165,7 +165,7 @@ name: "Introduction to Discrete Structures"
       },
 {
 type: 'courses',
-id: '235H',
+id: 'CSCE235H',
 attributes: {
 number: "235H",
 name: "Honors: Introduction to Discrete Structures"
@@ -173,7 +173,7 @@ name: "Honors: Introduction to Discrete Structures"
       },
 {
 type: 'courses',
-id: '236',
+id: 'CSCE236',
 attributes: {
 number: "236",
 name: "Embedded Systems"
@@ -181,7 +181,7 @@ name: "Embedded Systems"
       },
 {
 type: 'courses',
-id: '251',
+id: 'CSCE251',
 attributes: {
 number: "251",
 name: "Unix Programming Environment"
@@ -189,7 +189,7 @@ name: "Unix Programming Environment"
       },
 {
 type: 'courses',
-id: '251K',
+id: 'CSCE251K',
 attributes: {
 number: "251K",
 name: "C Programming "
@@ -197,7 +197,7 @@ name: "C Programming "
       },
 {
 type: 'courses',
-id: '252A',
+id: 'CSCE252A',
 attributes: {
 number: "252A",
 name: "FORTRAN Programming"
@@ -205,7 +205,7 @@ name: "FORTRAN Programming"
       },
 {
 type: 'courses',
-id: '283H',
+id: 'CSCE283H',
 attributes: {
 number: "283H",
 name: "Honors: Foundation of Computer Science"
@@ -213,7 +213,7 @@ name: "Honors: Foundation of Computer Science"
       },
 {
 type: 'courses',
-id: '284H',
+id: 'CSCE284H',
 attributes: {
 number: "284H",
 name: "Honors: Foundation of Computer Science"
@@ -221,7 +221,7 @@ name: "Honors: Foundation of Computer Science"
       },
 {
 type: 'courses',
-id: '290',
+id: 'CSCE290',
 attributes: {
 number: "290",
 name: "Special Topics in Computer Science"
@@ -229,7 +229,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '296',
+id: 'CSCE296',
 attributes: {
 number: "296",
 name: "Special Topics in Computer Science"
@@ -237,7 +237,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '310',
+id: 'CSCE310',
 attributes: {
 number: "310",
 name: "Data Structures and Algorithms"
@@ -245,7 +245,7 @@ name: "Data Structures and Algorithms"
       },
 {
 type: 'courses',
-id: '310H',
+id: 'CSCE310H',
 attributes: {
 number: "310H",
 name: "Honors: Data Structure and Algorithms"
@@ -253,7 +253,7 @@ name: "Honors: Data Structure and Algorithms"
       },
 {
 type: 'courses',
-id: '311',
+id: 'CSCE311',
 attributes: {
 number: "311",
 name: "Data Structures and Algorithms for Informatics"
@@ -261,7 +261,7 @@ name: "Data Structures and Algorithms for Informatics"
       },
 {
 type: 'courses',
-id: '320',
+id: 'CSCE320',
 attributes: {
 number: "320",
 name: "Data Analysis"
@@ -269,7 +269,7 @@ name: "Data Analysis"
       },
 {
 type: 'courses',
-id: '322',
+id: 'CSCE322',
 attributes: {
 number: "322",
 name: "Programming Language Concepts"
@@ -277,7 +277,7 @@ name: "Programming Language Concepts"
       },
 {
 type: 'courses',
-id: '322H',
+id: 'CSCE322H',
 attributes: {
 number: "322H",
 name: "Honors: Programming Language Concepts"
@@ -285,7 +285,7 @@ name: "Honors: Programming Language Concepts"
       },
 {
 type: 'courses',
-id: '335',
+id: 'CSCE335',
 attributes: {
 number: "335",
 name: "Digital Logic Design"
@@ -293,7 +293,7 @@ name: "Digital Logic Design"
       },
 {
 type: 'courses',
-id: '351',
+id: 'CSCE351',
 attributes: {
 number: "351",
 name: "Operating System Kernels"
@@ -301,7 +301,7 @@ name: "Operating System Kernels"
       },
 {
 type: 'courses',
-id: '361',
+id: 'CSCE361',
 attributes: {
 number: "361",
 name: "Software Engineering"
@@ -309,7 +309,7 @@ name: "Software Engineering"
       },
 {
 type: 'courses',
-id: '361H',
+id: 'CSCE361H',
 attributes: {
 number: "361H",
 name: "Honors: Software Engineering"
@@ -317,7 +317,7 @@ name: "Honors: Software Engineering"
       },
 {
 type: 'courses',
-id: '370H',
+id: 'CSCE370H',
 attributes: {
 number: "370H",
 name: "Data and Models II: Data Science Fundamentals"
@@ -325,7 +325,7 @@ name: "Data and Models II: Data Science Fundamentals"
       },
 {
 type: 'courses',
-id: '378',
+id: 'CSCE378',
 attributes: {
 number: "378",
 name: "Human-Computer Interaction"
@@ -333,7 +333,7 @@ name: "Human-Computer Interaction"
       },
 {
 type: 'courses',
-id: '378H',
+id: 'CSCE378H',
 attributes: {
 number: "378H",
 name: "Honors: Human-Computer Interaction"
@@ -341,7 +341,7 @@ name: "Honors: Human-Computer Interaction"
       },
 {
 type: 'courses',
-id: '383H',
+id: 'CSCE383H',
 attributes: {
 number: "383H",
 name: "Honors: Fundamentals of Software Engineering "
@@ -349,7 +349,7 @@ name: "Honors: Fundamentals of Software Engineering "
       },
 {
 type: 'courses',
-id: '384H',
+id: 'CSCE384H',
 attributes: {
 number: "384H",
 name: "Honors : Applied Numerical Analysis"
@@ -357,7 +357,7 @@ name: "Honors : Applied Numerical Analysis"
       },
 {
 type: 'courses',
-id: '390',
+id: 'CSCE390',
 attributes: {
 number: "390",
 name: "Special Topics in Computer Science"
@@ -365,7 +365,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '396',
+id: 'CSCE396',
 attributes: {
 number: "396",
 name: "Special Topics in Computer Science"
@@ -373,7 +373,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '399H',
+id: 'CSCE399H',
 attributes: {
 number: "399H",
 name: "Honors Thesis"
@@ -381,7 +381,7 @@ name: "Honors Thesis"
       },
 {
 type: 'courses',
-id: '401H',
+id: 'CSCE401H',
 attributes: {
 number: "401H",
 name: "Honors: RAIK Design Studio I"
@@ -389,7 +389,7 @@ name: "Honors: RAIK Design Studio I"
       },
 {
 type: 'courses',
-id: '402H',
+id: 'CSCE402H',
 attributes: {
 number: "402H",
 name: "Honors: RAIK Design Studio II"
@@ -397,7 +397,7 @@ name: "Honors: RAIK Design Studio II"
       },
 {
 type: 'courses',
-id: '403H',
+id: 'CSCE403H',
 attributes: {
 number: "403H",
 name: "Honors: RAIK Design Studio III"
@@ -405,7 +405,7 @@ name: "Honors: RAIK Design Studio III"
       },
 {
 type: 'courses',
-id: '404H',
+id: 'CSCE404H',
 attributes: {
 number: "404H",
 name: "Honors: RAIK Design Studio IV"
@@ -413,7 +413,7 @@ name: "Honors: RAIK Design Studio IV"
       },
 {
 type: 'courses',
-id: '410',
+id: 'CSCE410',
 attributes: {
 number: "410",
 name: "Information Retrieval Systems"
@@ -421,7 +421,7 @@ name: "Information Retrieval Systems"
       },
 {
 type: 'courses',
-id: '411',
+id: 'CSCE411',
 attributes: {
 number: "411",
 name: "Data Modeling for Systems Development"
@@ -429,7 +429,7 @@ name: "Data Modeling for Systems Development"
       },
 {
 type: 'courses',
-id: '411H',
+id: 'CSCE411H',
 attributes: {
 number: "411H",
 name: "Honors: Data Modeling for Systems Development"
@@ -437,7 +437,7 @@ name: "Honors: Data Modeling for Systems Development"
       },
 {
 type: 'courses',
-id: '413',
+id: 'CSCE413',
 attributes: {
 number: "413",
 name: "Database Systems"
@@ -445,7 +445,7 @@ name: "Database Systems"
       },
 {
 type: 'courses',
-id: '421',
+id: 'CSCE421',
 attributes: {
 number: "421",
 name: "Foundation of Constraint Processing"
@@ -453,7 +453,7 @@ name: "Foundation of Constraint Processing"
       },
 {
 type: 'courses',
-id: '423',
+id: 'CSCE423',
 attributes: {
 number: "423",
 name: "Design and Analysis of Algorithms"
@@ -461,7 +461,7 @@ name: "Design and Analysis of Algorithms"
       },
 {
 type: 'courses',
-id: '424',
+id: 'CSCE424',
 attributes: {
 number: "424",
 name: "Computational Complexity Theory"
@@ -469,7 +469,7 @@ name: "Computational Complexity Theory"
       },
 {
 type: 'courses',
-id: '425',
+id: 'CSCE425',
 attributes: {
 number: "425",
 name: "Compiler Construction"
@@ -477,7 +477,7 @@ name: "Compiler Construction"
       },
 {
 type: 'courses',
-id: '428',
+id: 'CSCE428',
 attributes: {
 number: "428",
 name: "Automata"
@@ -485,7 +485,7 @@ name: "Automata"
       },
 {
 type: 'courses',
-id: '430',
+id: 'CSCE430',
 attributes: {
 number: "430",
 name: "Computer Architecture"
@@ -493,7 +493,7 @@ name: "Computer Architecture"
       },
 {
 type: 'courses',
-id: '432',
+id: 'CSCE432',
 attributes: {
 number: "432",
 name: "High-Performance Processor Architectures"
@@ -501,7 +501,7 @@ name: "High-Performance Processor Architectures"
       },
 {
 type: 'courses',
-id: '434',
+id: 'CSCE434',
 attributes: {
 number: "434",
 name: "VLSI Design"
@@ -509,7 +509,7 @@ name: "VLSI Design"
       },
 {
 type: 'courses',
-id: '435',
+id: 'CSCE435',
 attributes: {
 number: "435",
 name: "Cluster and Grid Computing"
@@ -517,7 +517,7 @@ name: "Cluster and Grid Computing"
       },
 {
 type: 'courses',
-id: '436',
+id: 'CSCE436',
 attributes: {
 number: "436",
 name: "Advanced Embedded Systems"
@@ -525,7 +525,7 @@ name: "Advanced Embedded Systems"
       },
 {
 type: 'courses',
-id: '437',
+id: 'CSCE437',
 attributes: {
 number: "437",
 name: "File and Storage Systems"
@@ -533,7 +533,7 @@ name: "File and Storage Systems"
       },
 {
 type: 'courses',
-id: '438',
+id: 'CSCE438',
 attributes: {
 number: "438",
 name: "Sensor Networks"
@@ -541,7 +541,7 @@ name: "Sensor Networks"
       },
 {
 type: 'courses',
-id: '440',
+id: 'CSCE440',
 attributes: {
 number: "440",
 name: "Numerical Analysis I"
@@ -549,7 +549,7 @@ name: "Numerical Analysis I"
       },
 {
 type: 'courses',
-id: '441',
+id: 'CSCE441',
 attributes: {
 number: "441",
 name: "Approximation of Functions"
@@ -557,7 +557,7 @@ name: "Approximation of Functions"
       },
 {
 type: 'courses',
-id: '447',
+id: 'CSCE447',
 attributes: {
 number: "447",
 name: "Numerical Linear Algebra"
@@ -565,7 +565,7 @@ name: "Numerical Linear Algebra"
       },
 {
 type: 'courses',
-id: '451',
+id: 'CSCE451',
 attributes: {
 number: "451",
 name: "Operating Systems Principles"
@@ -573,7 +573,7 @@ name: "Operating Systems Principles"
       },
 {
 type: 'courses',
-id: '455',
+id: 'CSCE455',
 attributes: {
 number: "455",
 name: "Distributed Operating Systems"
@@ -581,7 +581,7 @@ name: "Distributed Operating Systems"
       },
 {
 type: 'courses',
-id: '456',
+id: 'CSCE456',
 attributes: {
 number: "456",
 name: "Parallel Programming"
@@ -589,7 +589,7 @@ name: "Parallel Programming"
       },
 {
 type: 'courses',
-id: '457',
+id: 'CSCE457',
 attributes: {
 number: "457",
 name: "Systems Administration"
@@ -597,7 +597,7 @@ name: "Systems Administration"
       },
 {
 type: 'courses',
-id: '461',
+id: 'CSCE461',
 attributes: {
 number: "461",
 name: "Advanced Topics in Software Engineering"
@@ -605,7 +605,7 @@ name: "Advanced Topics in Software Engineering"
       },
 {
 type: 'courses',
-id: '462',
+id: 'CSCE462',
 attributes: {
 number: "462",
 name: "Communication Networks"
@@ -613,7 +613,7 @@ name: "Communication Networks"
       },
 {
 type: 'courses',
-id: '463',
+id: 'CSCE463',
 attributes: {
 number: "463",
 name: "Data and Network Security"
@@ -621,7 +621,7 @@ name: "Data and Network Security"
       },
 {
 type: 'courses',
-id: '464',
+id: 'CSCE464',
 attributes: {
 number: "464",
 name: "Internet Systems and Programming"
@@ -629,7 +629,7 @@ name: "Internet Systems and Programming"
       },
 {
 type: 'courses',
-id: '465',
+id: 'CSCE465',
 attributes: {
 number: "465",
 name: "Wireless Communication Networks"
@@ -637,7 +637,7 @@ name: "Wireless Communication Networks"
       },
 {
 type: 'courses',
-id: '466',
+id: 'CSCE466',
 attributes: {
 number: "466",
 name: "Software Design and Architecture"
@@ -645,7 +645,7 @@ name: "Software Design and Architecture"
       },
 {
 type: 'courses',
-id: '467',
+id: 'CSCE467',
 attributes: {
 number: "467",
 name: "Testing"
@@ -653,7 +653,7 @@ name: "Testing"
       },
 {
 type: 'courses',
-id: '468',
+id: 'CSCE468',
 attributes: {
 number: "468",
 name: "Requirements Elicitation"
@@ -661,7 +661,7 @@ name: "Requirements Elicitation"
       },
 {
 type: 'courses',
-id: '470',
+id: 'CSCE470',
 attributes: {
 number: "470",
 name: "Computer Graphics"
@@ -669,7 +669,7 @@ name: "Computer Graphics"
       },
 {
 type: 'courses',
-id: '471',
+id: 'CSCE471',
 attributes: {
 number: "471",
 name: "Introduction to Bioinformatics"
@@ -677,7 +677,7 @@ name: "Introduction to Bioinformatics"
       },
 {
 type: 'courses',
-id: '472',
+id: 'CSCE472',
 attributes: {
 number: "472",
 name: "Digital Image Processing"
@@ -685,7 +685,7 @@ name: "Digital Image Processing"
       },
 {
 type: 'courses',
-id: '473',
+id: 'CSCE473',
 attributes: {
 number: "473",
 name: "Computer Vision"
@@ -693,7 +693,7 @@ name: "Computer Vision"
       },
 {
 type: 'courses',
-id: '474',
+id: 'CSCE474',
 attributes: {
 number: "474",
 name: "Introduction to Data Mining"
@@ -701,7 +701,7 @@ name: "Introduction to Data Mining"
       },
 {
 type: 'courses',
-id: '475',
+id: 'CSCE475',
 attributes: {
 number: "475",
 name: "Multiagent Systems"
@@ -709,7 +709,7 @@ name: "Multiagent Systems"
       },
 {
 type: 'courses',
-id: '476',
+id: 'CSCE476',
 attributes: {
 number: "476",
 name: "Introduction to Artificial Intelligence"
@@ -717,7 +717,7 @@ name: "Introduction to Artificial Intelligence"
       },
 {
 type: 'courses',
-id: '476H',
+id: 'CSCE476H',
 attributes: {
 number: "476H",
 name: "Honors: Introduction to Artificial Intelligence"
@@ -725,7 +725,7 @@ name: "Honors: Introduction to Artificial Intelligence"
       },
 {
 type: 'courses',
-id: '477',
+id: 'CSCE477',
 attributes: {
 number: "477",
 name: "Cryptography and Computer Security"
@@ -733,7 +733,7 @@ name: "Cryptography and Computer Security"
       },
 {
 type: 'courses',
-id: '478',
+id: 'CSCE478',
 attributes: {
 number: "478",
 name: "Introduction to Machine Learning "
@@ -741,7 +741,7 @@ name: "Introduction to Machine Learning "
       },
 {
 type: 'courses',
-id: '479',
+id: 'CSCE479',
 attributes: {
 number: "479",
 name: "Introduction to Neural Networks"
@@ -749,7 +749,7 @@ name: "Introduction to Neural Networks"
       },
 {
 type: 'courses',
-id: '486',
+id: 'CSCE486',
 attributes: {
 number: "486",
 name: "Computer Science Professional Project"
@@ -757,7 +757,7 @@ name: "Computer Science Professional Project"
       },
 {
 type: 'courses',
-id: '487',
+id: 'CSCE487',
 attributes: {
 number: "487",
 name: "Computer Science Senior Design Project"
@@ -765,7 +765,7 @@ name: "Computer Science Senior Design Project"
       },
 {
 type: 'courses',
-id: '488',
+id: 'CSCE488',
 attributes: {
 number: "488",
 name: "Computer Engineering Professional Development"
@@ -773,7 +773,7 @@ name: "Computer Engineering Professional Development"
       },
 {
 type: 'courses',
-id: '489',
+id: 'CSCE489',
 attributes: {
 number: "489",
 name: "Computer Engineering Senior Design Project"
@@ -781,7 +781,7 @@ name: "Computer Engineering Senior Design Project"
       },
 {
 type: 'courses',
-id: '490',
+id: 'CSCE490',
 attributes: {
 number: "490",
 name: "Special Topics in Computer Science"
@@ -789,7 +789,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '491',
+id: 'CSCE491',
 attributes: {
 number: "491",
 name: "Internship in Computing Practise"
@@ -797,7 +797,7 @@ name: "Internship in Computing Practise"
       },
 {
 type: 'courses',
-id: '493',
+id: 'CSCE493',
 attributes: {
 number: "493",
 name: "Innovation Lab Project"
@@ -805,7 +805,7 @@ name: "Innovation Lab Project"
       },
 {
 type: 'courses',
-id: '493A',
+id: 'CSCE493A',
 attributes: {
 number: "493A",
 name: "Interdiscipinary Capstone"
@@ -813,7 +813,7 @@ name: "Interdiscipinary Capstone"
       },
 {
 type: 'courses',
-id: '496',
+id: 'CSCE496',
 attributes: {
 number: "496",
 name: "Special Topics in Computer Science"
@@ -821,7 +821,7 @@ name: "Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '496H',
+id: 'CSCE496H',
 attributes: {
 number: "496H",
 name: "Honors: Special Topics in Computer Science"
@@ -829,7 +829,7 @@ name: "Honors: Special Topics in Computer Science"
       },
 {
 type: 'courses',
-id: '498',
+id: 'CSCE498',
 attributes: {
 number: "498",
 name: "Computer Problems"
@@ -837,7 +837,7 @@ name: "Computer Problems"
       },
 {
 type: 'courses',
-id: '891',
+id: 'CSCE891',
 attributes: {
 number: "891",
 name: "Internship in Computer Practise"
@@ -845,7 +845,7 @@ name: "Internship in Computer Practise"
       },
 {
 type: 'courses',
-id: '897',
+id: 'CSCE897',
 attributes: {
 number: "897",
 name: "Master Project"
@@ -853,7 +853,7 @@ name: "Master Project"
       },
 {
 type: 'courses',
-id: '899',
+id: 'CSCE899',
 attributes: {
 number: "899",
 name: "Master Thesis"
@@ -861,7 +861,7 @@ name: "Master Thesis"
       },
 {
 type: 'courses',
-id: '910',
+id: 'CSCE910',
 attributes: {
 number: "910",
 name: "Information Organization and Retrieval"
@@ -869,7 +869,7 @@ name: "Information Organization and Retrieval"
       },
 {
 type: 'courses',
-id: '913',
+id: 'CSCE913',
 attributes: {
 number: "913",
 name: "Advanced Topics in Database Systems"
@@ -877,7 +877,7 @@ name: "Advanced Topics in Database Systems"
       },
 {
 type: 'courses',
-id: '914',
+id: 'CSCE914',
 attributes: {
 number: "914",
 name: "Constraint Database Systems"
@@ -885,7 +885,7 @@ name: "Constraint Database Systems"
       },
 {
 type: 'courses',
-id: '921',
+id: 'CSCE921',
 attributes: {
 number: "921",
 name: "Advanced Constraint Processing"
@@ -893,7 +893,7 @@ name: "Advanced Constraint Processing"
       },
 {
 type: 'courses',
-id: '923',
+id: 'CSCE923',
 attributes: {
 number: "923",
 name: "Development and Analysis of Efficient Algorithms"
@@ -901,7 +901,7 @@ name: "Development and Analysis of Efficient Algorithms"
       },
 {
 type: 'courses',
-id: '924',
+id: 'CSCE924',
 attributes: {
 number: "924",
 name: "Graph Algorithms"
@@ -909,7 +909,7 @@ name: "Graph Algorithms"
       },
 {
 type: 'courses',
-id: '925',
+id: 'CSCE925',
 attributes: {
 number: "925",
 name: "Scheduling Theory"
@@ -917,7 +917,7 @@ name: "Scheduling Theory"
       },
 {
 type: 'courses',
-id: '930',
+id: 'CSCE930',
 attributes: {
 number: "930",
 name: "Advanced Computer Architecture"
@@ -925,7 +925,7 @@ name: "Advanced Computer Architecture"
       },
 {
 type: 'courses',
-id: '932',
+id: 'CSCE932',
 attributes: {
 number: "932",
 name: "Fault-Tolerance: Testing and Testable Design"
@@ -933,7 +933,7 @@ name: "Fault-Tolerance: Testing and Testable Design"
       },
 {
 type: 'courses',
-id: '933',
+id: 'CSCE933',
 attributes: {
 number: "933",
 name: "Fault-Tolerance: System Design and Analysis"
@@ -941,7 +941,7 @@ name: "Fault-Tolerance: System Design and Analysis"
       },
 {
 type: 'courses',
-id: '936',
+id: 'CSCE936',
 attributes: {
 number: "936",
 name: "Cyber-Physical Systems"
@@ -949,7 +949,7 @@ name: "Cyber-Physical Systems"
       },
 {
 type: 'courses',
-id: '942',
+id: 'CSCE942',
 attributes: {
 number: "942",
 name: "Numerical Analysis III"
@@ -957,7 +957,7 @@ name: "Numerical Analysis III"
       },
 {
 type: 'courses',
-id: '952',
+id: 'CSCE952',
 attributes: {
 number: "952",
 name: "Advanced Computer Networks"
@@ -965,7 +965,7 @@ name: "Advanced Computer Networks"
       },
 {
 type: 'courses',
-id: '953',
+id: 'CSCE953',
 attributes: {
 number: "953",
 name: "Optical Communication Networks"
@@ -973,7 +973,7 @@ name: "Optical Communication Networks"
       },
 {
 type: 'courses',
-id: '961',
+id: 'CSCE961',
 attributes: {
 number: "961",
 name: "Coding Theory"
@@ -981,7 +981,7 @@ name: "Coding Theory"
       },
 {
 type: 'courses',
-id: '962',
+id: 'CSCE962',
 attributes: {
 number: "962",
 name: "Advanced Software Engineering "
@@ -989,7 +989,7 @@ name: "Advanced Software Engineering "
       },
 {
 type: 'courses',
-id: '970',
+id: 'CSCE970',
 attributes: {
 number: "970",
 name: "Pattern Recognition"
@@ -997,7 +997,7 @@ name: "Pattern Recognition"
       },
 {
 type: 'courses',
-id: '971',
+id: 'CSCE971',
 attributes: {
 number: "971",
 name: "Advanced Bioinformatics"
@@ -1005,7 +1005,7 @@ name: "Advanced Bioinformatics"
       },
 {
 type: 'courses',
-id: '973',
+id: 'CSCE973',
 attributes: {
 number: "973",
 name: "Support Vector Machines"
@@ -1013,7 +1013,7 @@ name: "Support Vector Machines"
       },
 {
 type: 'courses',
-id: '974',
+id: 'CSCE974',
 attributes: {
 number: "974",
 name: "Genetic Algorithms"
@@ -1021,7 +1021,7 @@ name: "Genetic Algorithms"
       },
 {
 type: 'courses',
-id: '976',
+id: 'CSCE976',
 attributes: {
 number: "976",
 name: "Advanced Artificial Intelligence"
@@ -1029,7 +1029,7 @@ name: "Advanced Artificial Intelligence"
       },
 {
 type: 'courses',
-id: '977',
+id: 'CSCE977',
 attributes: {
 number: "977",
 name: "Data Encryption"
@@ -1037,7 +1037,7 @@ name: "Data Encryption"
       },
 {
 type: 'courses',
-id: '979',
+id: 'CSCE979',
 attributes: {
 number: "979",
 name: "Advances in Neural Networks and Genetic Algorithms"
@@ -1045,7 +1045,7 @@ name: "Advances in Neural Networks and Genetic Algorithms"
       },
 {
 type: 'courses',
-id: '99',
+id: 'CSCE99',
 attributes: {
 number: "99",
 name: "Graduate Seminar"
@@ -1053,7 +1053,7 @@ name: "Graduate Seminar"
       },
 {
 type: 'courses',
-id: '990',
+id: 'CSCE990',
 attributes: {
 number: "990",
 name: "Seminar"
@@ -1061,7 +1061,7 @@ name: "Seminar"
       },
 {
 type: 'courses',
-id: '996',
+id: 'CSCE996',
 attributes: {
 number: "996",
 name: "Research Problems Other Than Thesis"
@@ -1069,7 +1069,7 @@ name: "Research Problems Other Than Thesis"
       },
 {
 type: 'courses',
-id: '999',
+id: 'CSCE999',
 attributes: {
 number: "999",
 name: "Doctoral Dissertation"
