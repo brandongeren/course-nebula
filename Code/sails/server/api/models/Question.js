@@ -9,15 +9,15 @@ module.exports = {
 
   attributes: {
 
-    course : { model: 'course' },
+      course : { model: 'course', columnName: 'CourseID' },
 
-    text : { type: 'string' },
+      text : { type: 'string', columnName: 'QuestionText' },
 
-    date : { type: 'datetime' },
+      date : { type: 'datetime', columnName: 'DateOfQuestion' },
 
-    rating : { type: 'float' },
+      rating : { type: 'float', columnName: 'QuestionRating' },
 
-    answer : { model: 'answer' }
+      answer : { model: 'answer', columnName: 'AnswerID' }
   }
 };
 
