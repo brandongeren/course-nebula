@@ -15,3 +15,20 @@
 /Code/emberApp/libpeerconnection.log
 /Code/emberApp/npm-debug.log*
 /Code/emberApp/testem.log
+
+
+ # compiled output
+/Code/sails/emberApp/dist
+/Code/sails/emberApp/tmp
+ 
+ # dependencies
+/Code/sails/emberApp/node_modules
+/Code/sails/emberApp/bower_components
+ 
+ # misc
+/Code/sails/emberApp/.sass-cache
+/Code/sails/emberApp/connect.lock
+/Code/sails/emberApp/coverage/*
+/Code/sails/emberApp/libpeerconnection.log
+/Code/sails/emberApp/npm-debug.log*
+/Code/sails/emberApp/testem.log
