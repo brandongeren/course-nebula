@@ -14,18 +14,15 @@
 			{{/link-to}}
 		</div>
 		<div class="right links">
-			{{#if session.isAuthenticated}}
-			{{!--{{this.routeName}}--}}
-				<a {{action 'invalidateSession'}}>Logout</a>
-			{{else}}
+			{{#if isLoginButtonVisible}}
 				{{#link-to 'login'}}Login{{/link-to}}
-				{{#link-to 'register'}}Register{{/link-to}}
 			{{/if}}
+				{{#link-to 'register'}}Register{{/link-to}}
 		</div>
 
 	</div>
 	<div class="body">
-		{{outlet}}
+		{{outlet}}		
 	</div>
 
 
