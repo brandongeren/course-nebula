@@ -6,16 +6,19 @@
  */
 
 module.exports = {
-
+  connection: 'mysql',
+  tableName: 'User',
   attributes: {
 
-    username : { type: 'string' },
+      UserID : { type: 'string', unique: true, primarykey: true },
+
+    Username : { type: 'string' },
 
     password : { type: 'string' },
 
     email : { type: 'string' },
 
-    userAnsweredQuestions : { type: 'float' }
+    userAnsweredQuestions : { type: 'integer' }
   }
 };
 
