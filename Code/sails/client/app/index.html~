@@ -10,7 +10,7 @@
     {{content-for "head"}}
 
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/client.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/course-nebula.css">
     <link rel="icon" 
  	  type="image/png"
 	  href="https://www.dropbox.com/s/abvlthl0ie7a3l8/courseNebula.png?dl=0">
