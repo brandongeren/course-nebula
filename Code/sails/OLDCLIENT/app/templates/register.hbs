@@ -1,0 +1,17 @@
+{{outlet}}
+
+<div class="registration-page">
+  <div class="form">
+    <form class="registration-form" {{action 'authenticate' on='submit'}}>
+                {{input id='fname' placeholder='First Name' type='text' value=fname}}
+		{{input id='lname' placeholder='Last Name' type='text' value=lname}}
+		{{input id='emal' placeholder='Email' type='email' value=email}}
+		{{input id='username' placeholder='Username' value=username}}
+                {{input id='password' placeholder='Password' type='password' value=password}}
+                {{#link-to 'courses'}} <button type="submit">Register</button> {{/link-to}}
+                {{#if errorMessage}}
+                  <p>{{errorMessage}}</p>
+                {{/if}}
+    </form>
+  </div>
+</div>

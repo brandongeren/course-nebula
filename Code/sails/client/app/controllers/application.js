@@ -7,6 +7,10 @@ export default Ember.Controller.extend({
     invalidateSession() {
       this.get('session').invalidate();
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3dd51c7... navigation bar almost worked
   }*/
 
   hideLoginButtonRoutes: ['courses', 'show', 'ask'],
