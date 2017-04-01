@@ -1,0 +1,24 @@
+<article class="listing">
+	<h3>CSCE {{model.number}}</h3>
+	<div class="detail name">
+		{{model.name}}
+	</div>
+	<br/>
+	<a href="https://bulletin.unl.edu/courses/CSCE/{{model.number}}">UNL Bulletin Page</a>
+	<br/>
+	<a href="https://bulletin.unl.edu/courses/CSCE/{{model.number}}">Credit Hours</a>
+	<br/>
+	<a href="https://bulletin.unl.edu/courses/CSCE/{{model.number}}">Information about ACE credits</a>
+	<br/>
+<!--	 {{#link-to 'courses.show.ask' course=model}} <button type="submit">Ask a question!</button> {{/link-to}} -->
+  <br/>
+</article>
+
+
+{{outlet}}
+
+<ul class="results">
+	{{#each qn as |questionEntry|}}
+		<li>{{question-listing question=questionEntry}}</li>
+	{{/each}}
+</ul>

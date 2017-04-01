@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
 export default DS.RESTAdapter.extend({
   coalesceFindRequests: true,
@@ -7,5 +8,10 @@ export default DS.RESTAdapter.extend({
   //It is configured in config/environment.js
   //host: ClientENV.hostUrl
   //add IP from $DOCKER_HOST if --docker flag is set
-  //host: 'http://192.168.59.103:1337'
+  //host
 });
+
+/*export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
+  authorizer: 'authorizer:oauth2',
+  namespace: 'api'
+});*/

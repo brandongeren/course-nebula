@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'client',
+    modulePrefix: 'course-nebula',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -18,8 +18,16 @@ module.exports = function(environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+       contentSecurityPolicy: {
+              'default-src': "'none'",
+              'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+              'font-src': "'self'",
+              'connect-src': "'self'",
+              'img-src': "'self'",
+              'report-uri':"'localhost'",
+              'style-src': "'self' 'unsafe-inline'",
+              'frame-src': "'none'"
+            }
     }
   };
 
@@ -45,6 +53,13 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
+  ENV['simple-auth'] = {
+    store: 'simple-auth-session-store:local-storage',
+    authorizer: 'authorizer:custom',
+    crossOriginWhitelist: ['http://localhost:3001/'],
+    routeAfterAuthentication: '/protected'
+  };
 
   return ENV;
 };
