@@ -276,16 +276,15 @@ define('course-nebula/controllers/application', ['exports', 'ember'], function (
 define('course-nebula/controllers/courses/show/ask', ['exports', 'ember'], function (exports, _ember) {
 	exports['default'] = _ember['default'].Controller.extend({
 		actions: {
-			save: function save() {
+			savequestion: function savequestion() {
 				var text = this.get('text');
 				var date = new Date();
-				var course = null;
-				var rating = 0;
-
+				var course = this.get('model');
+				var rating = 1;
 				var question = this.get('store').createRecord('question', {
 					text: text,
 					date: date,
-					course: course,
+					course: this.get('model'),
 					rating: rating
 				});
 
@@ -1798,12 +1797,13 @@ define('course-nebula/routes/courses/show/ask', ['exports', 'ember'], function (
 	exports['default'] = _ember['default'].Route.extend({
 		actions: {
 			savequestion: function savequestion(body) {
-				this.get('store').createRecord('question', {
+				var q = this.get('store').createRecord('question', {
 					text: body,
-					course: null,
+					course: 1,
 					date: new Date(),
 					rating: 0
 				});
+				q.save();
 			}
 		}
 	});
@@ -1826,6 +1826,9 @@ define('course-nebula/routes/register', ['exports', 'ember'], function (exports,
 });
 define('course-nebula/routes/sessions', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({});
+});
+define('course-nebula/serializers/application', ['exports', 'ember-data'], function (exports, _emberData) {
+  exports['default'] = _emberData['default'].RESTSerializer.extend();
 });
 define('course-nebula/services/ajax', ['exports', 'ember-ajax/services/ajax'], function (exports, _emberAjaxServicesAjax) {
   Object.defineProperty(exports, 'default', {
@@ -2011,10 +2014,10 @@ define("course-nebula/templates/courses/index", ["exports"], function (exports) 
   exports["default"] = Ember.HTMLBars.template({ "id": "LkL3Wxgc", "block": "{\"statements\":[[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"jumbo\"],[\"flush-element\"],[\"text\",\"\\n     \"],[\"open-element\",\"h2\",[]],[\"flush-element\"],[\"text\",\"Available Courses\"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\\n\\n\"],[\"open-element\",\"ul\",[]],[\"static-attr\",\"class\",\"results\"],[\"flush-element\"],[\"text\",\"\\n\"],[\"block\",[\"each\"],[[\"get\",[\"model\"]]],null,0],[\"close-element\"],[\"text\",\"\\n\"],[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"     \\t\"],[\"open-element\",\"li\",[]],[\"flush-element\"],[\"append\",[\"helper\",[\"course-listing\"],null,[[\"course\"],[[\"get\",[\"singleCourse\"]]]]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[\"singleCourse\"]}],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/courses/index.hbs" } });
 });
 define("course-nebula/templates/courses/show", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "QdWBgZ3p", "block": "{\"statements\":[[\"open-element\",\"article\",[]],[\"static-attr\",\"class\",\"listing\"],[\"flush-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"h3\",[]],[\"flush-element\"],[\"text\",\"CSCE \"],[\"append\",[\"unknown\",[\"model\",\"number\"]],false],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"detail name\"],[\"flush-element\"],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"unknown\",[\"model\",\"name\"]],false],[\"text\",\"\\n\\t\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"a\",[]],[\"dynamic-attr\",\"href\",[\"concat\",[\"https://bulletin.unl.edu/courses/CSCE/\",[\"unknown\",[\"model\",\"number\"]]]]],[\"flush-element\"],[\"text\",\"UNL Bulletin Page\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"a\",[]],[\"dynamic-attr\",\"href\",[\"concat\",[\"https://bulletin.unl.edu/courses/CSCE/\",[\"unknown\",[\"model\",\"number\"]]]]],[\"flush-element\"],[\"text\",\"Credit Hours\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"a\",[]],[\"dynamic-attr\",\"href\",[\"concat\",[\"https://bulletin.unl.edu/courses/CSCE/\",[\"unknown\",[\"model\",\"number\"]]]]],[\"flush-element\"],[\"text\",\"Information about ACE credits\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"comment\",\"\\t {{#link-to 'courses.show.ask' course=model}} <button type=\\\"submit\\\">Ask a question!</button> {{/link-to}} \"],[\"text\",\"\\n  \"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\\n\\n\"],[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\\n\"],[\"open-element\",\"ul\",[]],[\"static-attr\",\"class\",\"results\"],[\"flush-element\"],[\"text\",\"\\n\"],[\"block\",[\"each\"],[[\"get\",[\"qn\"]]],null,0],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"\\t\\t\"],[\"open-element\",\"li\",[]],[\"flush-element\"],[\"append\",[\"helper\",[\"question-listing\"],null,[[\"question\"],[[\"get\",[\"questionEntry\"]]]]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[\"questionEntry\"]}],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/courses/show.hbs" } });
+  exports["default"] = Ember.HTMLBars.template({ "id": "mWVW36lC", "block": "{\"statements\":[[\"open-element\",\"article\",[]],[\"static-attr\",\"class\",\"listing\"],[\"flush-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"h3\",[]],[\"flush-element\"],[\"text\",\"CSCE \"],[\"append\",[\"unknown\",[\"model\",\"number\"]],false],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"detail name\"],[\"flush-element\"],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"unknown\",[\"model\",\"name\"]],false],[\"text\",\"\\n\\t\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"a\",[]],[\"dynamic-attr\",\"href\",[\"concat\",[\"https://bulletin.unl.edu/courses/CSCE/\",[\"unknown\",[\"model\",\"number\"]]]]],[\"flush-element\"],[\"text\",\"UNL Bulletin Page\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"a\",[]],[\"dynamic-attr\",\"href\",[\"concat\",[\"https://bulletin.unl.edu/courses/CSCE/\",[\"unknown\",[\"model\",\"number\"]]]]],[\"flush-element\"],[\"text\",\"Credit Hours\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"a\",[]],[\"dynamic-attr\",\"href\",[\"concat\",[\"https://bulletin.unl.edu/courses/CSCE/\",[\"unknown\",[\"model\",\"number\"]]]]],[\"flush-element\"],[\"text\",\"Information about ACE credits\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\t \"],[\"block\",[\"link-to\"],[\"courses.show.ask\"],[[\"course\"],[[\"get\",[\"model\"]]]],1],[\"text\",\"\\n  \"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\\n\\n\"],[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\\n\"],[\"open-element\",\"ul\",[]],[\"static-attr\",\"class\",\"results\"],[\"flush-element\"],[\"text\",\"\\n\"],[\"block\",[\"each\"],[[\"get\",[\"qn\"]]],null,0],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"\\t\\t\"],[\"open-element\",\"li\",[]],[\"flush-element\"],[\"append\",[\"helper\",[\"question-listing\"],null,[[\"question\"],[[\"get\",[\"questionEntry\"]]]]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[\"questionEntry\"]},{\"statements\":[[\"text\",\" \"],[\"open-element\",\"button\",[]],[\"static-attr\",\"type\",\"submit\"],[\"flush-element\"],[\"text\",\"Ask a question!\"],[\"close-element\"],[\"text\",\" \"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/courses/show.hbs" } });
 });
 define("course-nebula/templates/courses/show/ask", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "nwoVIpCa", "block": "{\"statements\":[[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"open-element\",\"article\",[]],[\"static-attr\",\"class\",\"listing\"],[\"flush-element\"],[\"text\",\"  \\n        \"],[\"open-element\",\"h1\",[]],[\"flush-element\"],[\"text\",\"New Question\"],[\"close-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"form\",[]],[\"modifier\",[\"action\"],[[\"get\",[null]],\"savequestion\"],[[\"on\"],[\"submit\"]]],[\"flush-element\"],[\"text\",\"\\n\\n        \"],[\"open-element\",\"dl\",[]],[\"flush-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"dt\",[]],[\"flush-element\"],[\"text\",\"Question:\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\" \"],[\"append\",[\"helper\",[\"textarea\"],null,[[\"value\",\"cols\",\"rows\"],[[\"get\",[\"text\"]],\"80\",\"6\"]]],false],[\"close-element\"],[\"text\",\"\\n        \"],[\"close-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"button\",[]],[\"static-attr\",\"type\",\"submit\"],[\"static-attr\",\"class\",\"btn btn-primary\"],[\"flush-element\"],[\"text\",\"Ask!\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/courses/show/ask.hbs" } });
+  exports["default"] = Ember.HTMLBars.template({ "id": "Ew75RQbc", "block": "{\"statements\":[[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"open-element\",\"article\",[]],[\"static-attr\",\"class\",\"listing\"],[\"flush-element\"],[\"text\",\"  \\n        \"],[\"open-element\",\"h1\",[]],[\"flush-element\"],[\"text\",\"New Question\"],[\"close-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"form\",[]],[\"modifier\",[\"action\"],[[\"get\",[null]],\"savequestion\"],[[\"on\"],[\"submit\"]]],[\"flush-element\"],[\"text\",\"\\n\\n        \"],[\"open-element\",\"dl\",[]],[\"flush-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"dt\",[]],[\"flush-element\"],[\"text\",\"Question:\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\" \"],[\"append\",[\"helper\",[\"textarea\"],null,[[\"value\",\"cols\",\"rows\"],[[\"get\",[\"text\"]],\"80\",\"6\"]]],false],[\"close-element\"],[\"text\",\"\\n        \"],[\"close-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"button\",[]],[\"static-attr\",\"type\",\"submit\"],[\"static-attr\",\"class\",\"btn btn-primary\"],[\"flush-element\"],[\"text\",\"Ask!\"],[\"close-element\"],[\"text\",\"\\n\\t\"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/courses/show/ask.hbs" } });
 });
 define("course-nebula/templates/index", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template({ "id": "wypBcDfX", "block": "{\"statements\":[[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/index.hbs" } });
@@ -2085,7 +2088,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+c34ac744"});
+  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+4982b227"});
 }
 
 /* jshint ignore:end */

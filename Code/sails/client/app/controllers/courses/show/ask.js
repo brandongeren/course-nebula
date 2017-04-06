@@ -2,16 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	actions: {
-		save: function() {
+		savequestion: function() {
 			var text = this.get('text');
 			var date = new Date();
-			var course = null;
-			var rating = 0;
-
+		        var course = this.get('model');
+			var rating = 1;
 			var question = this.get('store').createRecord('question', {
 				text: text,
 				date: date,
-				course: course,
+			        course: this.get('model'),
 				rating: rating
 			});
 
