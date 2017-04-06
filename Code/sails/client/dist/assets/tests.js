@@ -114,7 +114,7 @@ define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['ex
   QUnit.module('JSHint | controllers/courses/show/ask.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/courses/show/ask.js should pass jshint.');
+    assert.ok(false, 'controllers/courses/show/ask.js should pass jshint.\ncontrollers/courses/show/ask.js: line 8, col 21, \'course\' is defined but never used.\n\n1 error');
   });
 });
 define('course-nebula/tests/controllers/index.jshint.lint-test', ['exports'], function (exports) {
