@@ -656,6 +656,15 @@ define('course-nebula/tests/routes/sessions.jshint.lint-test', ['exports'], func
     assert.ok(true, 'routes/sessions.js should pass jshint.');
   });
 });
+define('course-nebula/tests/serializers/application.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | serializers/application.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'serializers/application.js should pass jshint.');
+  });
+});
 define('course-nebula/tests/services/dropbox-uploader.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 

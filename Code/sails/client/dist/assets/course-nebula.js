@@ -9,7 +9,7 @@
 define('course-nebula/adapters/application', ['exports', 'ember-data', 'ember-simple-auth/mixins/data-adapter-mixin'], function (exports, _emberData, _emberSimpleAuthMixinsDataAdapterMixin) {
   exports['default'] = _emberData['default'].RESTAdapter.extend({
     coalesceFindRequests: true,
-    namespace: 'api/v1'
+    namespace: 'api'
   });
 
   /*export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
@@ -1827,6 +1827,9 @@ define('course-nebula/routes/register', ['exports', 'ember'], function (exports,
 define('course-nebula/routes/sessions', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({});
 });
+define('course-nebula/serializers/application', ['exports', 'ember-data'], function (exports, _emberData) {
+  exports['default'] = _emberData['default'].RESTSerializer.extend();
+});
 define('course-nebula/services/ajax', ['exports', 'ember-ajax/services/ajax'], function (exports, _emberAjaxServicesAjax) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -2085,7 +2088,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+c34ac744"});
+  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+4982b227"});
 }
 
 /* jshint ignore:end */
