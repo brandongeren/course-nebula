@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
 			var question = this.get('store').createRecord('question', {
 				text: text,
 				date: date,
-			        course: this.get('model'),
+			        courseN: this.get('model'),
 				rating: rating
 			});
 
