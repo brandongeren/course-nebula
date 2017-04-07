@@ -10,15 +10,17 @@
 	<br/>
 	<a href="https://bulletin.unl.edu/courses/CSCE/{{model.number}}">Information about ACE credits</a>
 	<br/>
+
 	 {{#link-to 'courses.show.ask' course=model}} <button type="submit">Ask a question!</button> {{/link-to}}
   <br/>
-</article>
-
 
 {{outlet}}
 
 <ul class="results">
-	{{#each qn as |questionEntry|}}
-		<li>{{question-listing question=questionEntry}}</li>
+	{{#each model.questions as |question|}}
+		<li>{{question.text}}</li>
+	{{else}}
+		<li>Nobody has asked a question here yet.</li>
 	{{/each}}
 </ul>
+</article>

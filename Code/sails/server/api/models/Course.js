@@ -10,6 +10,11 @@ module.exports = {
   table: 'Course',
   attributes: {
 
+      questions: {
+          collection: 'question',
+	  via: 'courseN'
+      },
+
       number : { type: 'integer',
       columnName: 'CourseNumber' },
 

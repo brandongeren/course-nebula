@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
 
-      course : { model: 'course', columnName: 'CourseID' },
+      courseN : { model: 'course', columnName: 'CourseID' },
 
       text : { type: 'string', columnName: 'QuestionText' },
 

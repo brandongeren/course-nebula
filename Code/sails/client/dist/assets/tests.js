@@ -705,6 +705,28 @@ define('course-nebula/tests/test-helper.jshint.lint-test', ['exports'], function
     assert.ok(true, 'test-helper.js should pass jshint.');
   });
 });
+define('course-nebula/tests/unit/controllers/courses/show-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:courses/show', 'Unit | Controller | courses/show', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('course-nebula/tests/unit/controllers/courses/show-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/courses/show-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/courses/show-test.js should pass jshint.');
+  });
+});
 define('course-nebula/tests/unit/controllers/courses/show/ask-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('controller:courses/show/ask', 'Unit | Controller | courses/show/ask', {
