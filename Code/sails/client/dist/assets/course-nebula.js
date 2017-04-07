@@ -9,7 +9,7 @@
 define('course-nebula/adapters/application', ['exports', 'ember-data', 'ember-simple-auth/mixins/data-adapter-mixin'], function (exports, _emberData, _emberSimpleAuthMixinsDataAdapterMixin) {
   exports['default'] = _emberData['default'].RESTAdapter.extend({
     coalesceFindRequests: true,
-    namespace: 'api/v1'
+    namespace: 'api'
   });
 
   /*export default DS.JSONAPIAdapter.extend(DataAdapterMixin, {
