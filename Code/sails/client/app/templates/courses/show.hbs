@@ -23,4 +23,10 @@
 		<li>Nobody has asked a question here yet.</li>
 	{{/each}}
 </ul>
+
+	 {{#link-to 'courses.show.feedback' course=model}} <button type="submit">Provide feedback!</button> {{/link-to}}
+  <br/>
+
+{{outlet}}
+
 </article>
