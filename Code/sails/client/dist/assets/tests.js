@@ -108,6 +108,15 @@ define('course-nebula/tests/controllers/application.jshint.lint-test', ['exports
     assert.ok(true, 'controllers/application.js should pass jshint.');
   });
 });
+define('course-nebula/tests/controllers/courses/feedback.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/courses/feedback.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/courses/feedback.js should pass jshint.');
+  });
+});
 define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
@@ -115,6 +124,15 @@ define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['ex
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(false, 'controllers/courses/show/ask.js should pass jshint.\ncontrollers/courses/show/ask.js: line 8, col 21, \'course\' is defined but never used.\n\n1 error');
+  });
+});
+define('course-nebula/tests/controllers/courses/show/feedback.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/courses/show/feedback.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/courses/show/feedback.js should pass jshint.');
   });
 });
 define('course-nebula/tests/controllers/index.jshint.lint-test', ['exports'], function (exports) {
@@ -705,6 +723,28 @@ define('course-nebula/tests/test-helper.jshint.lint-test', ['exports'], function
     assert.ok(true, 'test-helper.js should pass jshint.');
   });
 });
+define('course-nebula/tests/unit/controllers/courses/feedback-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:courses/feedback', 'Unit | Controller | courses/feedback', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('course-nebula/tests/unit/controllers/courses/feedback-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/courses/feedback-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/courses/feedback-test.js should pass jshint.');
+  });
+});
 define('course-nebula/tests/unit/controllers/courses/show-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('controller:courses/show', 'Unit | Controller | courses/show', {
@@ -747,6 +787,28 @@ define('course-nebula/tests/unit/controllers/courses/show/ask-test.jshint.lint-t
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/courses/show/ask-test.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/unit/controllers/courses/show/feedback-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:courses/show/feedback', 'Unit | Controller | courses/show/feedback', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('course-nebula/tests/unit/controllers/courses/show/feedback-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/courses/show/feedback-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/courses/show/feedback-test.js should pass jshint.');
   });
 });
 define('course-nebula/tests/unit/controllers/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
