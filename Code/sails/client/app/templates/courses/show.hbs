@@ -24,6 +24,15 @@
 	{{/each}}
 </ul>
 <br/>
+
 <button>Leave feedback</button>
+
+<ul class="feedbackResults">
+    {{#each model.feedbacks as |feedback|}}
+    	    <li>{{feedback.text}}</li>
+    {{else}}
+	<li>Nobody has left a comment here yet.</li>
+    {{/each}}
+</ul>
 
 </article>
