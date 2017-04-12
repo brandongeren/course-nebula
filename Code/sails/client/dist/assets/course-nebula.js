@@ -335,6 +335,29 @@ define('course-nebula/controllers/login', ['exports', 'ember'], function (export
     }
   });
 });
+define('course-nebula/controllers/register', ['exports', 'ember'], function (exports, _ember) {
+	exports['default'] = _ember['default'].Controller.extend({
+		actions: {
+			authenticate: function authenticate() {
+				var fName = this.get('fname');
+				var lName = this.get('lname');
+				var email = this.get('email');
+				var username = this.get('username');
+				var password = this.get('password');
+
+				var newUser = this.get('store').createRecord('user', {
+					Username: username,
+					password: password,
+					email: email,
+					userAnsweredQuestions: 0
+				});
+
+				newUser.save();
+				this.transitionToRoute('courses');
+			}
+		}
+	});
+});
 define('course-nebula/controllers/sessions', ['exports', 'ember'], function (exports, _ember) {
 	exports['default'] = _ember['default'].Controller.extend({
 		assets: [],
@@ -1689,9 +1712,10 @@ define('course-nebula/models/question', ['exports', 'ember-data'], function (exp
 });
 define('course-nebula/models/user', ['exports', 'ember-data'], function (exports, _emberData) {
   exports['default'] = _emberData['default'].Model.extend({
-    name: _emberData['default'].attr('string'),
+    Username: _emberData['default'].attr('string'),
+    password: _emberData['default'].attr('string'),
     email: _emberData['default'].attr('string'),
-    credentials: _emberData['default'].hasMany('credential')
+    userAnsweredQuestions: _emberData['default'].attr('number')
   });
 });
 define('course-nebula/resolver', ['exports', 'ember-resolver'], function (exports, _emberResolver) {
@@ -2035,7 +2059,7 @@ define("course-nebula/templates/login", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template({ "id": "I2fzwKNu", "block": "{\"statements\":[[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\\n\"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"login-page\"],[\"flush-element\"],[\"text\",\"\\n  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"form\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"form\",[]],[\"static-attr\",\"class\",\"login-form\"],[\"modifier\",[\"action\"],[[\"get\",[null]],\"authenticate\"],[[\"on\"],[\"submit\"]]],[\"flush-element\"],[\"text\",\"\\n  \\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"value\"],[\"username\",\"username\",[\"get\",[\"username\"]]]]],false],[\"text\",\"\\n  \\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"password\",\"password\",\"password\",[\"get\",[\"password\"]]]]],false],[\"text\",\"\\n  \\t\\t\"],[\"block\",[\"link-to\"],[\"courses\"],null,1],[\"text\",\"\\n\"],[\"block\",[\"if\"],[[\"get\",[\"errorMessage\"]]],null,0],[\"text\",\"    \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"  \\t\\t  \"],[\"open-element\",\"p\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"errorMessage\"]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]},{\"statements\":[[\"text\",\" \"],[\"open-element\",\"button\",[]],[\"static-attr\",\"type\",\"submit\"],[\"flush-element\"],[\"text\",\"login\"],[\"close-element\"],[\"text\",\" \"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/login.hbs" } });
 });
 define("course-nebula/templates/register", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "BXruWkfV", "block": "{\"statements\":[[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\\n\"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"registration-page\"],[\"flush-element\"],[\"text\",\"\\n  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"form\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"form\",[]],[\"static-attr\",\"class\",\"registration-form\"],[\"modifier\",[\"action\"],[[\"get\",[null]],\"authenticate\"],[[\"on\"],[\"submit\"]]],[\"flush-element\"],[\"text\",\"\\n                \"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"fname\",\"First Name\",\"text\",[\"get\",[\"fname\"]]]]],false],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"lname\",\"Last Name\",\"text\",[\"get\",[\"lname\"]]]]],false],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"emal\",\"Email\",\"email\",[\"get\",[\"email\"]]]]],false],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"value\"],[\"username\",\"Username\",[\"get\",[\"username\"]]]]],false],[\"text\",\"\\n                \"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"password\",\"Password\",\"password\",[\"get\",[\"password\"]]]]],false],[\"text\",\"\\n                \"],[\"block\",[\"link-to\"],[\"courses\"],null,1],[\"text\",\"\\n\"],[\"block\",[\"if\"],[[\"get\",[\"errorMessage\"]]],null,0],[\"text\",\"    \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"                  \"],[\"open-element\",\"p\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"errorMessage\"]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]},{\"statements\":[[\"text\",\" \"],[\"open-element\",\"button\",[]],[\"static-attr\",\"type\",\"submit\"],[\"flush-element\"],[\"text\",\"Register\"],[\"close-element\"],[\"text\",\" \"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/register.hbs" } });
+  exports["default"] = Ember.HTMLBars.template({ "id": "hSb0juRw", "block": "{\"statements\":[[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\\n\"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"registration-page\"],[\"flush-element\"],[\"text\",\"\\n  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"form\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"form\",[]],[\"static-attr\",\"class\",\"registration-form\"],[\"modifier\",[\"action\"],[[\"get\",[null]],\"authenticate\"],[[\"on\"],[\"submit\"]]],[\"flush-element\"],[\"text\",\"\\n                \"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"fname\",\"First Name\",\"text\",[\"get\",[\"fname\"]]]]],false],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"lname\",\"Last Name\",\"text\",[\"get\",[\"lname\"]]]]],false],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"email\",\"Email\",\"email\",[\"get\",[\"email\"]]]]],false],[\"text\",\"\\n\\t\\t\"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"value\"],[\"username\",\"Username\",[\"get\",[\"username\"]]]]],false],[\"text\",\"\\n                \"],[\"append\",[\"helper\",[\"input\"],null,[[\"id\",\"placeholder\",\"type\",\"value\"],[\"password\",\"Password\",\"password\",[\"get\",[\"password\"]]]]],false],[\"text\",\"\\n                \"],[\"open-element\",\"button\",[]],[\"static-attr\",\"type\",\"submit\"],[\"flush-element\"],[\"text\",\"Register\"],[\"close-element\"],[\"text\",\"\\n\"],[\"block\",[\"if\"],[[\"get\",[\"errorMessage\"]]],null,0],[\"text\",\"    \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"                  \"],[\"open-element\",\"p\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"errorMessage\"]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/register.hbs" } });
 });
 define("course-nebula/templates/sessions", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template({ "id": "sBFv4vVD", "block": "{\"statements\":[[\"open-element\",\"h1\",[]],[\"flush-element\"],[\"text\",\"Hello, \"],[\"append\",[\"unknown\",[\"model\",\"user\",\"name\"]],false],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n\\n\"],[\"append\",[\"helper\",[\"file-uploader\"],null,[[\"isDisabled\",\"fileInputChanged\",\"uploadProgress\"],[[\"get\",[\"uploadDisabled\"]],\"receiveFile\",\"uploadProgress\"]]],false],[\"text\",\"\\n\\n\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\\n\"],[\"block\",[\"if\"],[[\"get\",[\"isDownloading\"]]],null,1],[\"text\",\"\\n\"],[\"block\",[\"each\"],[[\"get\",[\"assets\"]]],null,0]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"    \"],[\"open-element\",\"b\",[]],[\"static-attr\",\"class\",\"asset\"],[\"modifier\",[\"action\"],[[\"get\",[null]],\"downloadFile\",[\"get\",[\"file\"]]]],[\"flush-element\"],[\"append\",[\"unknown\",[\"file\",\"path\"]],false],[\"close-element\"],[\"open-element\",\"br\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[\"file\"]},{\"statements\":[[\"text\",\"  \"],[\"open-element\",\"b\",[]],[\"flush-element\"],[\"text\",\"loading...\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "course-nebula/templates/sessions.hbs" } });
@@ -2097,7 +2121,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+5fa9125f"});
+  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+97c90650"});
 }
 
 /* jshint ignore:end */

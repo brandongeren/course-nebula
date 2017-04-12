@@ -1,0 +1,23 @@
+import Ember from 'ember';
+
+export default Ember.Controller.extend({
+    actions: {
+	authenticate: function() {
+	    var fName = this.get('fname');
+	    var lName = this.get('lname');
+	    var email = this.get('email');
+	    var username = this.get('username');
+	    var password = this.get('password');
+
+	    var newUser = this.get('store').createRecord('user', {
+		Username : username,
+		password : password,
+		email : email,
+		userAnsweredQuestions : 0
+	    });
+
+	    newUser.save();
+	    this.transitionToRoute('courses');
+	}
+    }
+});
