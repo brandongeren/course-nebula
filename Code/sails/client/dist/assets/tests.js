@@ -153,6 +153,15 @@ define('course-nebula/tests/controllers/login.jshint.lint-test', ['exports'], fu
     assert.ok(true, 'controllers/login.js should pass jshint.');
   });
 });
+define('course-nebula/tests/controllers/register.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/register.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/register.js should pass jshint.\ncontrollers/register.js: line 6, col 13, \'fName\' is defined but never used.\ncontrollers/register.js: line 7, col 13, \'lName\' is defined but never used.\n\n2 errors');
+  });
+});
 define('course-nebula/tests/controllers/sessions.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
@@ -853,6 +862,28 @@ define('course-nebula/tests/unit/controllers/model-test.jshint.lint-test', ['exp
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/model-test.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/unit/controllers/register-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:register', 'Unit | Controller | register', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('course-nebula/tests/unit/controllers/register-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/register-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/register-test.js should pass jshint.');
   });
 });
 define('course-nebula/tests/unit/models/asset-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
