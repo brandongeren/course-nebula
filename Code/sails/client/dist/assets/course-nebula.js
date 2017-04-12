@@ -1656,7 +1656,8 @@ define('course-nebula/models/course', ['exports', 'ember-data'], function (expor
     exports['default'] = _emberData['default'].Model.extend({
         number: _emberData['default'].attr('string'),
         name: _emberData['default'].attr('string'),
-        questions: _emberData['default'].hasMany('question')
+        questions: _emberData['default'].hasMany('question'),
+        feedbacks: _emberData['default'].hasMany('feedback')
     });
 });
 define('course-nebula/models/credential', ['exports', 'ember-data'], function (exports, _emberData) {
@@ -1684,7 +1685,7 @@ define('course-nebula/models/dashboardItem', ['exports', 'ember-data'], function
 });
 define('course-nebula/models/feedback', ['exports', 'ember-data'], function (exports, _emberData) {
     exports['default'] = _emberData['default'].Model.extend({
-        course: _emberData['default'].belongsTo('course'),
+        courseN: _emberData['default'].belongsTo('course'),
         feedbackText: _emberData['default'].attr('string'),
         feedbackRating: _emberData['default'].attr('number'),
         dateOfFeedback: _emberData['default'].attr('date')
@@ -2121,7 +2122,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+97c90650"});
+  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+f0ad19e6"});
 }
 
 /* jshint ignore:end */
