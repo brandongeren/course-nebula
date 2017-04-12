@@ -11,6 +11,8 @@ module.exports = {
 
       courseN : { model: 'course', columnName: 'CourseID' },
 
+      answerN : { model: 'answer'},
+
       text : { type: 'string', columnName: 'QuestionText' },
 
       date : { type: 'datetime', columnName: 'DateOfQuestion' },

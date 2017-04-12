@@ -9,6 +9,8 @@ module.exports = {
 
   attributes: {
 
+      questionN : { model: 'Question' },
+
       text : { type: 'string', columnName: 'AnswerText' },
 
       date : { type: 'datetime', columnName: 'DateOfAnswer' },
