@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('courses', function() {
     this.route('show', {path: '/:course_id'}, function() {
       this.route('ask');
+      this.route('feedback');
     });
   });
   this.route('about');

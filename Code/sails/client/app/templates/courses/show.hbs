@@ -25,7 +25,11 @@
 </ul>
 <br/>
 
-<button>Leave feedback</button>
+<div class="inner">
+
+{{#link-to 'courses.show.feedback' course=model}} <button type="submit">Leave a comment!</button> {{/link-to}}
+
+{{outlet name}}
 
 <ul class="feedbackResults">
     {{#each model.feedbacks as |feedback|}}
@@ -34,5 +38,6 @@
 	<li>Nobody has left a comment here yet.</li>
     {{/each}}
 </ul>
+</div>
 
 </article>
