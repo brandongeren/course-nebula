@@ -15,6 +15,11 @@ module.exports = {
 	  via: 'courseN'
       },
 
+      feedbacks: {
+	  collection: 'feedback',
+	  via: 'courseN'
+      },
+
       number : { type: 'integer',
       columnName: 'CourseNumber' },
 

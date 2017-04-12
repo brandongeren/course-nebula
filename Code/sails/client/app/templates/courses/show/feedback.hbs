@@ -1,11 +1,11 @@
 <br/>
 <article class="listing">  
-        <h1>New Question</h1>
-        <form {{action 'savequestion' on="submit"}}>
+        <h1>New Comment</h1>
+        <form {{action 'savefeedback' on="submit"}}>
 
         <dl>
-        <dt>Question:<br> {{textarea value=text cols="80" rows="6"}}</dt>
+        <dt>Comment:<br> {{textarea value=text cols="80" rows="6"}}</dt>
         </dl>
-        <button type="submit" class="btn btn-primary">Send feedback!</button>
+        <button type="submit" class="btn btn-primary">Send comment!</button>
 	</form>
 </article>
