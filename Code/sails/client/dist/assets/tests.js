@@ -132,7 +132,7 @@ define('course-nebula/tests/controllers/courses/show/feedback.jshint.lint-test',
   QUnit.module('JSHint | controllers/courses/show/feedback.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/courses/show/feedback.js should pass jshint.');
+    assert.ok(false, 'controllers/courses/show/feedback.js should pass jshint.\ncontrollers/courses/show/feedback.js: line 8, col 21, \'course\' is defined but never used.\n\n1 error');
   });
 });
 define('course-nebula/tests/controllers/index.jshint.lint-test', ['exports'], function (exports) {
@@ -638,6 +638,15 @@ define('course-nebula/tests/routes/courses/show/ask.jshint.lint-test', ['exports
     assert.ok(true, 'routes/courses/show/ask.js should pass jshint.');
   });
 });
+define('course-nebula/tests/routes/courses/show/feedback.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/courses/show/feedback.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/courses/show/feedback.js should pass jshint.');
+  });
+});
 define('course-nebula/tests/routes/index.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
@@ -1098,6 +1107,27 @@ define('course-nebula/tests/unit/routes/courses/show/ask-test.jshint.lint-test',
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/courses/show/ask-test.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/unit/routes/courses/show/feedback-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:courses/show/feedback', 'Unit | Route | courses/show/feedback', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('course-nebula/tests/unit/routes/courses/show/feedback-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/courses/show/feedback-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/courses/show/feedback-test.js should pass jshint.');
   });
 });
 define('course-nebula/tests/unit/routes/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
