@@ -25,6 +25,12 @@
 <ol class="questionResults" style="margin-left:32px">
 	{{#each model.questions as |question|}}
 		<li>{{question.text}}</li>
+		<ul class="answerResults" style="margin-left:48px">
+		    {{#each question.answers as |answer|}}
+		    	   <li>{{answer.text}}</li>
+		    {{/each}}
+		    <li>{{input value="Answer this question..."}}</li>
+		</ul>
 	{{else}}
 		<li>Nobody has asked a question here yet.</li>
 	{{/each}}
