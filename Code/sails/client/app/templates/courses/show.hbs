@@ -18,12 +18,17 @@
 
 {{outlet}}
 
-<ul class="results">
+<br/><br/>
+
+<ul class="questionBegin" style="margin-left:16px">
+<b><li>QUESTIONS</li></b>
+<ol class="questionResults" style="margin-left:32px">
 	{{#each model.questions as |question|}}
 		<li>{{question.text}}</li>
 	{{else}}
 		<li>Nobody has asked a question here yet.</li>
 	{{/each}}
+</ol>
 </ul>
 <br/>
 
