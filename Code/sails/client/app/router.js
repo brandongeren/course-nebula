@@ -11,7 +11,7 @@ Router.map(function() {
     this.route('show', {path: '/:course_id'}, function() {
       this.route('ask');
       this.route('feedback');
-      this.route('answerQ');
+      this.route('answer');
     });
   });
   this.route('about');

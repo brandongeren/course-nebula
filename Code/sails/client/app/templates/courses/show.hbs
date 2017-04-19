@@ -29,7 +29,7 @@
 		    {{#each question.answers as |answer|}}
 		    	   <li>{{answer.text}}</li>
 		    {{/each}}
-		    <li> {{#link-to 'courses.show.answerQ' question=question}} <button type="submit">Submit a new answer!</button> {{/link-to}}</li>
+		    <li> {{#link-to 'courses.show.answer' question=question}} <button type="submit">Submit a new answer!</button> {{/link-to}}</li>
 		</ul>
 	{{else}}
 		<li>Nobody has asked a question here yet.</li>
