@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
 
-      questionN : { model: 'Question' },
+      questionN : { model: 'Question', columnName: 'QuestionID' },
 
       text : { type: 'string', columnName: 'AnswerText' },
 

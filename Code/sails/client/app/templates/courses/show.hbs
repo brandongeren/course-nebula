@@ -29,7 +29,7 @@
 		    {{#each question.answers as |answer|}}
 		    	   <li>{{answer.text}}</li>
 		    {{/each}}
-		    <li>{{input value=question.textVAR question=question enter="addAnswer"}}</li>
+		    <li>{{input value="text" enter="addAnswer"}}</li>
 		</ul>
 	{{else}}
 		<li>Nobody has asked a question here yet.</li>
