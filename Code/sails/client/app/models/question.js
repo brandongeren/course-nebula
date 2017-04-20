@@ -5,5 +5,5 @@ export default DS.Model.extend({
     answers: DS.hasMany('answer'),
     text: DS.attr('string'),
     date: DS.attr('date'),
-    rating: DS.attr('number'),
+    rating: DS.attr('number')
 });
