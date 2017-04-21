@@ -20,7 +20,7 @@ module.exports = {
 	  via: 'courseN'
       },
 
-      number : { type: 'integer',
+      number : { type: 'string',
       columnName: 'CourseNumber' },
 
       name : { type: 'string',
