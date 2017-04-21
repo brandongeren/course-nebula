@@ -132,7 +132,7 @@ define('course-nebula/tests/controllers/courses/show/answer.jshint.lint-test', [
   QUnit.module('JSHint | controllers/courses/show/answer.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/courses/show/answer.js should pass jshint.\ncontrollers/courses/show/answer.js: line 9, col 21, \'questionN\' is defined but never used.\n\n1 error');
+    assert.ok(true, 'controllers/courses/show/answer.js should pass jshint.');
   });
 });
 define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {

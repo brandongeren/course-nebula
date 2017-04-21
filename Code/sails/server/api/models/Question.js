@@ -11,10 +11,7 @@ module.exports = {
 
       courseN : { model: 'course', columnName: 'CourseID' },
 
-      answers: {
-          collection: 'answer',
-	  via: 'aquestion'
-      },
+      answers : { collection: 'answer', via: 'aquestion' },
 
       text : { type: 'string', columnName: 'QuestionText' },
 
