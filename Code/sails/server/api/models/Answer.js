@@ -10,8 +10,7 @@ module.exports = {
   table: 'Answer',
 
   attributes: {
-
-      questionN : { model: 'question', columnName: 'questionID' },
+      aquestion : { model: 'question', columnName: 'questionID' },
 
       text : { type: 'string', columnName: 'AnswerText' },
 

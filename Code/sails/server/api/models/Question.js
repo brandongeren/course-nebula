@@ -13,7 +13,7 @@ module.exports = {
 
       answers: {
           collection: 'answer',
-	  via: 'questionN'
+	  via: 'aquestion'
       },
 
       text : { type: 'string', columnName: 'QuestionText' },

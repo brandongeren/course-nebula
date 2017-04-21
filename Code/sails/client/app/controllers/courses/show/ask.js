@@ -17,6 +17,16 @@ export default Ember.Controller.extend({
 			this.set('text', '');
 			this.set('course', '');
 			question.save();
+
+			var answer = this.get('store').createRecord('answer', {
+				text: text,
+				date: date,
+			        aquestion: question,
+				rating: rating
+			});
+
+		    answer.save();
+
 			this.transitionToRoute('courses');
 		}
 	}

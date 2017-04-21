@@ -6,7 +6,7 @@
   "disableAnalytics": false,
   "database": "mysql",
   "docker": false,
-  "verbose": false,
+  "verbose": true,
   "skipNpm": false,
   "skipBower": false
 }
