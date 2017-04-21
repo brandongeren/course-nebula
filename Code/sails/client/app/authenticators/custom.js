@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import Base from 'simple-auth/authenticators/base';
+import Base from 'ember-simple-auth/authenticators/base';
 export default Base.extend({
-    tokenEndpoint: 'http://localhost:3001/sessions/create',
+    tokenEndpoint: 'http://localhost:1337/api/v1/users',
     restore: function(data) {
         return new Ember.RSVP.Promise(function(resolve, reject) {
             if (!Ember.isEmpty(data.token)) {
