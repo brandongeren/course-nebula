@@ -20,9 +20,8 @@ module.exports = {
 
       date : { type: 'datetime', columnName: 'DateOfQuestion' },
 
-      rating : { type: 'float', columnName: 'QuestionRating' },
+      rating : { type: 'float', columnName: 'QuestionRating' }
 
-      answer : { model: 'answer', columnName: 'AnswerID' }
   }
 };
 

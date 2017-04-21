@@ -11,7 +11,7 @@ module.exports = {
 
   attributes: {
 
-      questionN : { model: 'question', columnName: 'QuestionID' },
+      questionN : { model: 'question', columnName: 'questionID' },
 
       text : { type: 'string', columnName: 'AnswerText' },
 
