@@ -4,19 +4,21 @@ export default Ember.Controller.extend({
         queryParams: ['questionID'],
 	actions: {
 		answerquestion: function() {
+		   
+		    var thequestion = this.store.peekRecord('question',this.get('questionID'));
 			var text = this.get('text');
 			var date = new Date();
-		    var aquestion = this.get('store').findRecord(
-			'question',this.get('questionID'));
 			var rating = 1;
 			var answer = this.get('store').createRecord('answer', {
-			    aquestion: aquestion,
+			    aquestion: thequestion,
 				text: text,
 				date: date,
 			        rating: rating
 			});
 			answer.save();
-			this.transitionToRoute('courses');
+			this.set('text', '');
+		    this.transitionToRoute('courses');
+			
 		}
 	}
 });
