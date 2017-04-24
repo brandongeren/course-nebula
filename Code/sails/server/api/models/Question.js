@@ -11,13 +11,14 @@ module.exports = {
 
       courseN : { model: 'course', columnName: 'CourseID' },
 
+      answers : { collection: 'answer', via: 'aquestion' },
+
       text : { type: 'string', columnName: 'QuestionText' },
 
       date : { type: 'datetime', columnName: 'DateOfQuestion' },
 
-      rating : { type: 'float', columnName: 'QuestionRating' },
+      rating : { type: 'float', columnName: 'QuestionRating' }
 
-      answer : { model: 'answer', columnName: 'AnswerID' }
   }
 };
 

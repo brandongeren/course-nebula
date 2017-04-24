@@ -6,8 +6,11 @@
  */
 
 module.exports = {
+  connection: 'mysql',
+  table: 'Answer',
 
   attributes: {
+      aquestion : { model: 'question', columnName: 'questionID' },
 
       text : { type: 'string', columnName: 'AnswerText' },
 

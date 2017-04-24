@@ -126,7 +126,26 @@ define('course-nebula/tests/controllers/courses/feedback.jshint.lint-test', ['ex
     assert.ok(true, 'controllers/courses/feedback.js should pass jshint.');
   });
 });
-define('course-nebula/tests/controllers/courses/index.jshint.lint-test', ['exports'], function (exports) {
+
+define('course-nebula/tests/controllers/courses/show.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/courses/show.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/courses/show.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/controllers/courses/show/answer.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/courses/show/answer.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/courses/show/answer.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
   QUnit.module('JSHint | controllers/courses/index.js');
@@ -676,6 +695,15 @@ define('course-nebula/tests/routes/courses/show.jshint.lint-test', ['exports'], 
     assert.ok(true, 'routes/courses/show.js should pass jshint.');
   });
 });
+define('course-nebula/tests/routes/courses/show/answer.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/courses/show/answer.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/courses/show/answer.js should pass jshint.');
+  });
+});
 define('course-nebula/tests/routes/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
@@ -830,6 +858,28 @@ define('course-nebula/tests/unit/controllers/courses/show-test.jshint.lint-test'
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/courses/show-test.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/unit/controllers/courses/show/answer-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:courses/show/answer', 'Unit | Controller | courses/show/answer', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('course-nebula/tests/unit/controllers/courses/show/answer-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/courses/show/answer-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/courses/show/answer-test.js should pass jshint.');
   });
 });
 define('course-nebula/tests/unit/controllers/courses/show/ask-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -1133,6 +1183,27 @@ define('course-nebula/tests/unit/routes/courses/show-test.jshint.lint-test', ['e
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/courses/show-test.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/unit/routes/courses/show/answer-q-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:courses/show/answer-q', 'Unit | Route | courses/show/answer q', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('course-nebula/tests/unit/routes/courses/show/answer-q-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/courses/show/answer-q-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/courses/show/answer-q-test.js should pass jshint.');
   });
 });
 define('course-nebula/tests/unit/routes/courses/show/ask-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

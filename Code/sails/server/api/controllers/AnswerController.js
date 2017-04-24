@@ -8,11 +8,13 @@
 module.exports = {
     add: function(req,res) {
          //{"UserID":"0","Username":"test","password":"pass","email":"me@gmail.com","userAnsweredQuestions":0};
+	var questionN = req.param('question');
 	var text = req.param('text');
 	var date = req.param('date');
 	var rating = req.param('rating');
 
 	var answer = {
+	    questionN : questionN,
 	    text : text,
 	    date : date,
 	    rating : rating
