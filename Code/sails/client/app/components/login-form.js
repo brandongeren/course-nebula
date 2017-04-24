@@ -9,9 +9,18 @@ const { service } = Ember.inject;
 const options = {
   auth: {
     params: {scope: 'openid email'},
-    redirectUrl: 'http://localhost:4200/about',
-    responseType: 'token'
-  }
+    redirectUrl: 'http://localhost:4200/courses',
+    responseType: 'token',
+  },
+
+  languageDictionary: {
+	      title: "Course Nebula"
+	    },
+  theme: {
+   logo: '/assets/images/courseNebula.png',
+   primaryColor: '#176117'
+  },
+
 };
 
 let lock = new Auth0Lock(config.Auth0.clientId, config.Auth0.domain, options);

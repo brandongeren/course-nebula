@@ -342,9 +342,18 @@ define('course-nebula/components/login-form', ['exports', 'ember', 'course-nebul
   var options = {
     auth: {
       params: { scope: 'openid email' },
-      redirectUrl: 'http://localhost:4200/about',
+      redirectUrl: 'http://localhost:4200/courses',
       responseType: 'token'
+    },
+
+    languageDictionary: {
+      title: "Course Nebula"
+    },
+    theme: {
+      logo: '/assets/images/courseNebula.png',
+      primaryColor: '#176117'
     }
+
   };
 
   var lock = new Auth0Lock(_courseNebulaConfigEnvironment['default'].Auth0.clientId, _courseNebulaConfigEnvironment['default'].Auth0.domain, options);
@@ -2337,7 +2346,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+772c4370"});
+  require("course-nebula/app")["default"].create({"contentSecurityPolicy":{"default-src":"'none'","script-src":"'self' 'unsafe-inline' 'unsafe-eval'","font-src":"'self'","connect-src":"'self'","img-src":"'self'","report-uri":"'localhost'","style-src":"'self' 'unsafe-inline'","frame-src":"'none'"},"name":"course-nebula","version":"0.0.0+4d30db46"});
 }
 
 /* jshint ignore:end */
