@@ -33,7 +33,7 @@ define('course-nebula/tests/authenticators/oauth2.jshint.lint-test', ['exports']
   QUnit.module('JSHint | authenticators/oauth2.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'authenticators/oauth2.js should pass jshint.\nauthenticators/oauth2.js: line 8, col 56, \'data\' is not defined.\n\n1 error');
+    assert.ok(true, 'authenticators/oauth2.js should pass jshint.');
   });
 });
 define('course-nebula/tests/authorizers/custom.jshint.lint-test', ['exports'], function (exports) {
@@ -61,6 +61,15 @@ define('course-nebula/tests/components/course-listing.jshint.lint-test', ['expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'components/course-listing.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/components/courses-filter.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | components/courses-filter.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/courses-filter.js should pass jshint.');
   });
 });
 define('course-nebula/tests/components/file-uploader.jshint.lint-test', ['exports'], function (exports) {
@@ -117,6 +126,7 @@ define('course-nebula/tests/controllers/courses/feedback.jshint.lint-test', ['ex
     assert.ok(true, 'controllers/courses/feedback.js should pass jshint.');
   });
 });
+
 define('course-nebula/tests/controllers/courses/show.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
@@ -138,6 +148,15 @@ define('course-nebula/tests/controllers/courses/show/answer.jshint.lint-test', [
 define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
+  QUnit.module('JSHint | controllers/courses/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/courses/index.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
   QUnit.module('JSHint | controllers/courses/show/ask.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
@@ -151,15 +170,6 @@ define('course-nebula/tests/controllers/courses/show/feedback.jshint.lint-test',
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(false, 'controllers/courses/show/feedback.js should pass jshint.\ncontrollers/courses/show/feedback.js: line 8, col 21, \'course\' is defined but never used.\n\n1 error');
-  });
-});
-define('course-nebula/tests/controllers/index.jshint.lint-test', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | controllers/index.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'controllers/index.js should pass jshint.');
   });
 });
 define('course-nebula/tests/controllers/login.jshint.lint-test', ['exports'], function (exports) {
@@ -360,6 +370,44 @@ define('course-nebula/tests/integration/components/course-listing-test.jshint.li
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/course-listing-test.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/integration/components/courses-filter-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('courses-filter', 'Integration | Component | courses filter', {
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template({
+      'id': 'ADLBpXCt',
+      'block': '{"statements":[["append",["unknown",["courses-filter"]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template({
+      'id': 's8a3V8gI',
+      'block': '{"statements":[["text","\\n"],["block",["courses-filter"],null,null,0],["text","  "]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      template block text\\n"]],"locals":[]}],"hasPartials":false}',
+      'meta': {}
+    }));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+define('course-nebula/tests/integration/components/courses-filter-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | integration/components/courses-filter-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/courses-filter-test.js should pass jshint.');
   });
 });
 define('course-nebula/tests/integration/components/file-uploader-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

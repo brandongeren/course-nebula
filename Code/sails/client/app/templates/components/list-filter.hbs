@@ -1,2 +1,6 @@
-{{input value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Filter By Class"}}
+{{input value=value 
+	key-up=(action 'handleFilterEntry')
+	class="light"
+	placeholder="Search by Course Number. e.g. '310'"
+	width="100%"}}
 {{yield results}}

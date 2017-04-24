@@ -18,7 +18,6 @@ Router.map(function() {
   this.route('login');
   this.route('coursesTest');
   this.route('register');
-  this.route('sessions');
 });
 
 export default Router;

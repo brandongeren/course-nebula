@@ -55,10 +55,10 @@ module.exports = function(environment) {
   }
 
   ENV['simple-auth'] = {
-    store: 'simple-auth-session-store:local-storage',
-    authorizer: 'authorizer:custom',
-    crossOriginWhitelist: ['http://localhost:3001/'],
-    routeAfterAuthentication: '/protected'
+	      store: 'simple-auth-session-store:local-storage',
+	      authorizer: 'authorizer:custom',
+	      crossOriginWhitelist: ['http://localhost:1337/'],
+	      routeAfterAuthentication: '/courses'
   };
 
   return ENV;

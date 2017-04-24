@@ -3,10 +3,14 @@
 <div class="login-page">
   <div class="form">
     <form class="login-form" {{action 'authenticate' on='submit'}}>
+		<label><font size="5">Login</font></label>
   		{{input id='username' placeholder='username' value=username}}
   		{{input id='password' placeholder='password' type='password' value=password}}
-  		{{#link-to 'courses'}} <button type="submit">login</button> {{/link-to}}
-  		{{#if errorMessage}}
+  		{{#link-to 'courses'}} <button type="submit">Login!</button> {{/link-to}}
+  		<br><br>
+		{{#link-to 'register'}}<a>New User Register!</a> {{/link-to}}	
+	
+		{{#if errorMessage}}
   		  <p>{{errorMessage}}</p>
   		{{/if}}
     </form>
