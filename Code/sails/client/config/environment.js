@@ -1,5 +1,7 @@
 /* jshint node: true */
 
+var auth0 = require('../auth0-variables');
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'course-nebula',
@@ -28,6 +30,12 @@ module.exports = function(environment) {
               'style-src': "'self' 'unsafe-inline'",
               'frame-src': "'none'"
             }
+    },
+
+    Auth0: {
+      clientId: auth0.AUTH0_CLIENT_ID,
+      domain: auth0.AUTH0_DOMAIN,
+      callbackUrl: 'http://localhost:4200/courses',
     }
   };
 
@@ -53,13 +61,6 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
-
-  ENV['simple-auth'] = {
-	      store: 'simple-auth-session-store:local-storage',
-	      authorizer: 'authorizer:custom',
-	      crossOriginWhitelist: ['http://localhost:1337/'],
-	      routeAfterAuthentication: '/courses'
-  };
 
   return ENV;
 };

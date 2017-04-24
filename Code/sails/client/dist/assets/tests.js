@@ -6,7 +6,7 @@ define('course-nebula/tests/adapters/application.jshint.lint-test', ['exports'],
   QUnit.module('JSHint | adapters/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'adapters/application.js should pass jshint.\nadapters/application.js: line 2, col 8, \'DataAdapterMixin\' is defined but never used.\n\n1 error');
+    assert.ok(true, 'adapters/application.js should pass jshint.');
   });
 });
 define('course-nebula/tests/app.jshint.lint-test', ['exports'], function (exports) {
@@ -16,6 +16,24 @@ define('course-nebula/tests/app.jshint.lint-test', ['exports'], function (export
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'app.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/authenticators/Auth0Authenticator.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | authenticators/Auth0Authenticator.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'authenticators/Auth0Authenticator.js should pass jshint.\nauthenticators/Auth0Authenticator.js: line 58, col 16, \'hash\' is defined but never used.\nauthenticators/Auth0Authenticator.js: line 6, col 15, \'isEmpty\' is defined but never used.\nauthenticators/Auth0Authenticator.js: line 6, col 24, \'run\' is defined but never used.\nauthenticators/Auth0Authenticator.js: line 6, col 29, \'computed\' is defined but never used.\nauthenticators/Auth0Authenticator.js: line 7, col 7, \'assign\' is defined but never used.\n\n5 errors');
+  });
+});
+define('course-nebula/tests/authenticators/auth0.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | authenticators/auth0.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'authenticators/auth0.js should pass jshint.');
   });
 });
 define('course-nebula/tests/authenticators/custom.jshint.lint-test', ['exports'], function (exports) {
@@ -34,6 +52,15 @@ define('course-nebula/tests/authenticators/oauth2.jshint.lint-test', ['exports']
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'authenticators/oauth2.js should pass jshint.');
+  });
+});
+define('course-nebula/tests/authorizers/application.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | authorizers/application.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'authorizers/application.js should pass jshint.');
   });
 });
 define('course-nebula/tests/authorizers/custom.jshint.lint-test', ['exports'], function (exports) {
@@ -96,7 +123,7 @@ define('course-nebula/tests/components/login-form.jshint.lint-test', ['exports']
   QUnit.module('JSHint | components/login-form.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/login-form.js should pass jshint.');
+    assert.ok(false, 'components/login-form.js should pass jshint.\ncomponents/login-form.js: line 6, col 9, \'service\' is defined but never used.\n\n1 error');
   });
 });
 define('course-nebula/tests/components/question-listing.jshint.lint-test', ['exports'], function (exports) {
@@ -791,6 +818,15 @@ define('course-nebula/tests/services/dropbox-utils.jshint.lint-test', ['exports'
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(false, 'services/dropbox-utils.js should pass jshint.\nservices/dropbox-utils.js: line 10, col 10, Expected an assignment or function call and instead saw an expression.\nservices/dropbox-utils.js: line 20, col 18, \'accessToken\' is defined but never used.\nservices/dropbox-utils.js: line 7, col 30, \'replace\' is not defined.\n\n3 errors');
+  });
+});
+define('course-nebula/tests/services/session-account.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | services/session-account.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'services/session-account.js should pass jshint.');
   });
 });
 define('course-nebula/tests/services/session.jshint.lint-test', ['exports'], function (exports) {
