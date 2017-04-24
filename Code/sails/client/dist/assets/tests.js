@@ -126,7 +126,15 @@ define('course-nebula/tests/controllers/courses/feedback.jshint.lint-test', ['ex
     assert.ok(true, 'controllers/courses/feedback.js should pass jshint.');
   });
 });
+define('course-nebula/tests/controllers/courses/index.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
 
+  QUnit.module('JSHint | controllers/courses/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/courses/index.js should pass jshint.');
+  });
+});
 define('course-nebula/tests/controllers/courses/show.jshint.lint-test', ['exports'], function (exports) {
   'use strict';
 
@@ -143,15 +151,6 @@ define('course-nebula/tests/controllers/courses/show/answer.jshint.lint-test', [
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'controllers/courses/show/answer.js should pass jshint.');
-  });
-});
-define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | controllers/courses/index.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'controllers/courses/index.js should pass jshint.');
   });
 });
 define('course-nebula/tests/controllers/courses/show/ask.jshint.lint-test', ['exports'], function (exports) {

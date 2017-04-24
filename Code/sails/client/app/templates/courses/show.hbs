@@ -11,9 +11,6 @@
 	<a href="https://bulletin.unl.edu/courses/CSCE/{{model.number}}">Information about ACE credits</a>
 	<br/>
 
-	 {{#link-to 'courses.show.ask' course=model}} <button type="submit">Ask a question!</button> {{/link-to}}
-  <br/><br/>
-{{#link-to 'courses.show.feedback' course=model}} <button type="submit">Leave a comment!</button> {{/link-to}}
   <br/>
 
 {{outlet}}
@@ -29,23 +26,27 @@
 		    {{#each question.answers as |answer|}}
 		    	   <li>{{answer.text}}</li>
 		    {{/each}}
-		    <li> {{#link-to 'courses.show.answer' (query-params questionID=question.id)}} <button type="submit">Submit a new answer!</button> {{/link-to}}</li>
+		    <li> {{#link-to 'courses.show.answer' (query-params questionID=question.id)}} <button type="submit" size="xs">Submit a new answer!</button> {{/link-to}}</li>
 		</ul>
 	{{else}}
 		<li>Nobody has asked a question here yet.</li>
 	{{/each}}
+<br/>
+ <li>{{#link-to 'courses.show.ask' course=model}} <button type="submit" size="xs">Ask a question!</button> {{/link-to}}</li>
 </ol>
 </ul>
 <br/>
 
 
 
-
-<ul class="feedbackResults">
+<b><li>COMMENTS</li></b>
+<ol class="feedbackResults">
     {{#each model.feedbacks as |feedback|}}
     	    <li>{{feedback.text}}</li>
     {{else}}
 	<li>Nobody has left a comment here yet.</li>
     {{/each}}
-</ul>
+<br/>
+<li>{{#link-to 'courses.show.feedback' course=model}} <button type="submit" size="xs">Share a comment!</button> {{/link-to}}</li>
+</ol>
 </article>
